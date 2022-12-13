@@ -1,0 +1,152 @@
+import React from 'react'
+import { useState } from 'react'
+import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
+import india from '../../static/images/india.png'
+
+function Footer() {
+
+    const [viewSupport, setViewSupport] = useState(false)
+    const [viewDiscover, setViewDiscover] = useState(false)
+    const [viewTerms, setViewTerms] = useState(false)
+    const [viewPartners, setViewPartners] = useState(false)
+    const [viewAbout, setViewAbout] = useState(false)
+
+    return (
+        <div className='bg-stone-100 text-text'>
+            <div className='mx-5  lg:max-w-6xl lg:mx-auto'>
+
+            <div className='md:grid md:grid-cols-5 md:gap-5'>
+
+                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                    <div className='flex justify-between items-center' onClick={() => setViewSupport(!viewSupport)}>
+                        <div className='font-medium'>Support</div>
+                        <div className='md:hidden text-lg mb-2'>{viewSupport ? < AiOutlineUp /> : < AiOutlineDown />} </div>
+                    </div>
+                    {viewSupport && (
+                        <div className='space-y-2 md:hidden'>
+                            <div className='text-sm'> Coronavirus (COVID-19) FAQs</div>
+                            <div className='text-sm'> Manage your trips</div>
+                            <div className='text-sm'> Attractions help center</div>
+                            <div className='text-sm'> Safety Resource Center</div>
+                        </div>
+                    )}
+                    <div className='space-y-2 hidden md:block'>
+                        <div className='text-sm'> Coronavirus (COVID-19) FAQs</div>
+                        <div className='text-sm'> Manage your trips</div>
+                        <div className='text-sm'> Attractions help center</div>
+                        <div className='text-sm'> Safety Resource Center</div>
+                    </div>
+                </div>
+
+                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                    <div className='flex justify-between items-center' onClick={() => setViewDiscover(!viewDiscover)}>
+                        <div className=' font-medium'>Discover</div>
+                        <div className='md:hidden text-lg mb-2'>{viewDiscover ? < AiOutlineUp /> : < AiOutlineDown />}</div>
+                    </div>
+                    {viewDiscover && (
+                        <div className='space-y-2 md:hidden'>
+                            <div className='text-sm'> Genius loyalty program</div>
+                            <div className='text-sm'> Seasonal and holiday deals</div>
+                            <div className='text-sm'> Travel articles</div>
+                            <div className='text-sm'> Travel communities</div>
+                            <div className='text-sm'> Booking.com for Business</div>
+                        </div>
+                    )}
+                    <div className='space-y-2 hidden md:block'>
+                        <div className='text-sm'> Genius loyalty program</div>
+                        <div className='text-sm'> Seasonal and holiday deals</div>
+                        <div className='text-sm'> Travel articles</div>
+                        <div className='text-sm'> Travel communities</div>
+                        <div className='text-sm'> Booking.com for Business</div>
+                    </div>
+                </div>
+
+                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                    <div className='flex justify-between items-center' onClick={() => setViewTerms(!viewTerms)}>
+                        <div className=' font-medium'>Terms and settings</div>
+                        <div className='md:hidden text-lg mb-2'>{viewTerms ? < AiOutlineUp /> : < AiOutlineDown />}</div>
+                    </div>
+                    {viewTerms && (
+                        <div className='space-y-2 md:hidden'>
+                            <div className='text-sm'> Privacy & cookies</div>
+                            <div className='text-sm'> Terms & conditions</div>
+                            <div className='text-sm'> Grievance officer</div>
+                            <div className='text-sm'> MSA statement</div>
+                        </div>
+                    )}
+                    <div className='space-y-2 hidden md:block'>
+                        <div className='text-sm'> Privacy & cookies</div>
+                        <div className='text-sm'> Terms & conditions</div>
+                        <div className='text-sm'> Grievance officer</div>
+                        <div className='text-sm'> MSA statement</div>
+                    </div>
+                </div>
+
+                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                    <div className='flex justify-between items-center' onClick={() => setViewPartners(!viewPartners)}>
+                        <div className=' font-medium'>Partners</div>
+                        <div className='md:hidden text-lg mb-2'>{viewPartners ? < AiOutlineUp /> : < AiOutlineDown />}</div>
+                    </div>
+                    {viewPartners && (
+                        <div className='space-y-2 md:hidden'>
+                            <div className='text-sm'> Extranet login</div>
+                            <div className='text-sm'> Partner help</div>
+                            <div className='text-sm'> List your property</div>
+                            <div className='text-sm'> Become an affiliate</div>
+                        </div>
+                    )}
+                    <div className='space-y-2 hidden md:block'>
+                        <div className='text-sm'> Extranet login</div>
+                        <div className='text-sm'> Partner help</div>
+                        <div className='text-sm'> List your property</div>
+                        <div className='text-sm'> Become an affiliate</div>
+                    </div>
+                </div>
+
+                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                    <div className='flex justify-between items-center' onClick={() => setViewAbout(!viewAbout)}>
+                        <div className=' font-medium'>About</div>
+                        <div className='md:hidden text-lg mb-2'>{viewAbout ? < AiOutlineUp /> : < AiOutlineDown />}</div>
+                    </div>
+                    {viewAbout && (
+                        <div className='space-y-2 md:hidden'>
+                            <div className='text-sm'> About Booking.com</div>
+                            <div className='text-sm'> How We Work</div>
+                            <div className='text-sm'> Sustainability</div>
+                            <div className='text-sm'> Press center</div>
+                            <div className='text-sm'> Careers</div>
+                            <div className='text-sm'> Investor relations</div>
+                            <div className='text-sm'> Corporate contact</div>
+                        </div>
+                    )}
+                    <div className='space-y-2 hidden md:block'>
+                        <div className='text-sm'> About Booking.com</div>
+                        <div className='text-sm'> How We Work</div>
+                        <div className='text-sm'> Sustainability</div>
+                        <div className='text-sm'> Press center</div>
+                        <div className='text-sm'> Careers</div>
+                        <div className='text-sm'> Investor relations</div>
+                        <div className='text-sm'> Corporate contact</div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div className='flex justify-center items-center py-7 border-b-2 space-x-5'>
+                    <span className=''>
+                        <img src={india} alt='india' className='h-5 w-5' />
+                    </span>
+                    <span className='text-xl'>INR</span>
+                </div>
+
+                <div className='text-text text-xs py-5 text-center leading-relaxed space-y-2'>
+                    <div className=''>Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.</div>
+                    <div className=''>Copyright © 1996–2022 Booking.com™. All rights reserved.</div>
+                </div>
+
+            </div>
+        </div>
+    )
+}
+
+export default Footer

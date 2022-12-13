@@ -1,5 +1,4 @@
 import React from 'react'
-import { Footer } from '../../components/Layouts'
 import EnquirySection from '../Attraction/EnquirySection'
 import FeatureSection from '../Attraction/FeatureSection'
 import InfoSection from '../Attraction/InfoSection'

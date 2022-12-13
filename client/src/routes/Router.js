@@ -12,7 +12,7 @@ const ThemeRoutes = [
         ),
         children: [
             { path: "", element: <AttractionHomePage /> },
-            { path: "/attraction", element: <AttractionLandingPage /> },
+            { path: "/attraction/:id", element: <AttractionLandingPage /> },
             { path: "/details", element: <AttractionDetailsPage /> }
         ]
     }

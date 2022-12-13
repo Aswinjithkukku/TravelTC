@@ -3,7 +3,7 @@ import { CgProfile } from 'react-icons/cg'
 import { AiOutlineMenu, AiOutlineQuestionCircle } from 'react-icons/ai'
 import { CgSmartphone } from "react-icons/cg";
 import { GrClose } from 'react-icons/gr'
-import { NavbarLinks } from '../../data'
+// import { NavbarLinks } from '../../data'
 import { MenuLinks } from '../../data'
 import india from '../../static/images/india.png'
 

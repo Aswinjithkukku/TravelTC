@@ -1,7 +1,9 @@
-import React from 'react'
+import React , { useState } from 'react'
 import { TiTick } from 'react-icons/ti'
 
 function PackageSection() {
+
+    const [ show, setShow ] = useState(false) 
     return (
         <>
             <div className='text-xl font-semibold my-2'>Select Package Options</div>
@@ -9,12 +11,12 @@ function PackageSection() {
                 <div className='p-4'>
                     <div className='flex space-x-3 py-4'>
                         <div className='flex items-center'>
-                            <input type='radio' className='scale-125' />
+                            <input type='radio' className='scale-125' checked={show}  onChange={(e) => setShow(!show) } />
                         </div>
                         <div className=''>
                             <div className='font-medium lg:text-lg '>Burj Khalifa & Dubai Aquarium Combo</div>
                             <div className='text-xs lg:text-sm'>2 Hours</div>
-                            <div className='text-orange-500'>Show details</div>
+                            <div className='text-orange-500' onClick={() => setShow(!show)}>{show ? "Hide details" : "Show details" }</div>
                         </div>
                         <div className=''>
                             <div className='text-text text-sm lg:text-base'>INR 7,345</div>
@@ -22,7 +24,7 @@ function PackageSection() {
                             <div className='text-xs'>Per Adult</div>
                         </div>
                     </div>
-                    <div className=' border-t'>
+                    <div className={`${show ? "block" : "hidden"} border-t`}>
                         <div className='flex overflow-x-auto space-x-2 py-3 '>
                             <span className=''>
                                 <img src='https://cdn.pixabay.com/photo/2017/04/08/10/42/burj-khalifa-2212978_960_720.jpg' alt='burj'
@@ -65,7 +67,7 @@ function PackageSection() {
                                 <span className=''>Admission to: Underwater Zoo</span>
                             </div>
                         </div>
-                        <div className='text-orange-500 my-4'>Hide details</div>
+                        <div className='text-orange-500 my-4' onClick={() => setShow(!show)}>Hide details</div>
 
                     </div>
                 </div>

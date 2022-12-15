@@ -29,7 +29,7 @@ const MenuLinks = {
   settingsAndLegal: [
     {
       to: "",
-      name: "About Booking.com",
+      name: "About TCtours.com",
       icon: <AiOutlineInfoCircle />,
     },
     {

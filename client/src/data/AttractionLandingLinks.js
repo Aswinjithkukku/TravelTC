@@ -4,7 +4,7 @@ const AttractionLandingLinks = [
         name: "Burj Khalifa",
         reviews: 1073,
         price: 3453,
-        img: "https://cdn.pixabay.com/photo/2017/04/08/10/42/burj-khalifa-2212978_960_720.jpg"
+        img: "https://websaweprd.blob.core.windows.net/cms-assets-international/styles/1920w/public/2021-03/Inspiration%20Project_Burj%20Khalifa_Main%20Pic_2880%20x%201620px.jpg?itok=FzSDqWEK"
     },
     {
         place: "Dubai",

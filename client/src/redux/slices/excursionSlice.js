@@ -3,12 +3,14 @@ import axios from '../../axios'
 
 const initialState = {
     loading: false,
-    moreDestinations: []
+    moreDestinations: [],
+    excursions: [],
+    enquiryExcursion: []
 }
 
 export const getMoreDestinations = createAsyncThunk(
     "excursion/getMoreDestinations",
-    async(dispatch, {getState}) => {
+    async(args, {getState}) => {
         // const { token } = getState().user
         // const config = {
         //     headers: {
@@ -19,6 +21,20 @@ export const getMoreDestinations = createAsyncThunk(
         return response.data;
     }
 )
+export const getExcursions = createAsyncThunk(
+    "excursion/getExcursions",
+    async(args, {getState}) => {
+        // const { token } = getState().user
+        // const config = {
+        //     headers: {
+        //         Authorization: `Bearer ${token}`,
+        //       },
+        // }
+        const response =  await axios.get('/tour/exe')
+        return response.data;
+    }
+)
+
 
 
 const excursionSlice = createSlice({
@@ -31,6 +47,13 @@ const excursionSlice = createSlice({
         [getMoreDestinations.fulfilled]: (state, action) => {
             state.loading = false
             state.moreDestinations = action.payload
+        },
+        [getExcursions.pending]: (state, action) => {
+            state.loading = true
+        },
+        [getExcursions.fulfilled]: (state, action) => {
+            state.loading = false
+            state.excursions = action.payload
         },
     }
 })

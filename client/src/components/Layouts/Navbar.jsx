@@ -6,6 +6,7 @@ import { GrClose } from 'react-icons/gr'
 // import { NavbarLinks } from '../../data'
 import { MenuLinks } from '../../data'
 import india from '../../static/images/india.png'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
 
@@ -72,18 +73,20 @@ function Navbar() {
 
       </div>
       )}
-      <div className='bg-card'>
-        <div className=' py-3 px-3 lg:max-w-6xl lg:mx-auto'>
+      <div className='bg-soft'>
+        <div className=' py-3 px-3 lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between'>
-            <div className='text-2xl font-bold text-text'>TcTours</div>
+            <Link to='/'>
+            <div className='text-3xl font-bold text-main'>TC tours</div>
+            </Link>
             <div className='flex space-x-5'>
               <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span>
               <span className='lg:hidden flex items-center text-stone-600 text-2xl' onClick={() => setViewMenu(!viewMenu)}><AiOutlineMenu /></span>
               <span className='hidden lg:flex items-center text-stone-600 text-lg font-semibold'>INR</span>
               <span className='hidden lg:flex items-center text-stone-600 text-2xl'><img src={india} alt='india' className='h-6 w-6' /></span>
               <span className='hidden lg:flex items-center text-stone-600 text-2xl'><AiOutlineQuestionCircle /> </span>
-              <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-1 rounded-lg shadow-sm'>Register </span>
-              <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-1 rounded-lg shadow-sm'>Sign in</span>
+              <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-3 rounded-lg shadow-sm'>Register </span>
+              <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-3 rounded-lg shadow-sm'>Sign in</span>
             </div>
           </div>
           <div className=' mt-2'>

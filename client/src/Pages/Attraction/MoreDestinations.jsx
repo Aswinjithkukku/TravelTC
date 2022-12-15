@@ -15,9 +15,9 @@ function MoreDestinations() {
   }, [dispatch])
 
   return (
-    <div className='mx-5 my-7 lg:mx-auto lg:max-w-6xl'>
+    <div className='mx-5 my-7 lg:mx-auto lg:max-w-screen-xl'>
       <div className=''>
-        <div className='text-xl font-semibold text-text'>
+        <div className='text-3xl font-semibold text-dark'>
           Explore more destinations
         </div>
         <p className='text-text my-1'>Find things to do in cities around the world</p>

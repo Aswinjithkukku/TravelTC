@@ -12,12 +12,12 @@ function Footer() {
     const [viewAbout, setViewAbout] = useState(false)
 
     return (
-        <div className='bg-stone-100 text-text'>
-            <div className='mx-5  lg:max-w-6xl lg:mx-auto'>
+        <div className='bg-dark text-text'>
+            <div className='mx-5  lg:max-w-screen-xl lg:mx-auto'>
 
             <div className='md:grid md:grid-cols-5 md:gap-5'>
 
-                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                <div className='py-4 border-text border-b-2 space-y-2 md:border-none'>
                     <div className='flex justify-between items-center' onClick={() => setViewSupport(!viewSupport)}>
                         <div className='font-medium'>Support</div>
                         <div className='md:hidden text-lg mb-2'>{viewSupport ? < AiOutlineUp /> : < AiOutlineDown />} </div>
@@ -38,7 +38,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                <div className='py-4 border-text border-b-2 space-y-2 md:border-none'>
                     <div className='flex justify-between items-center' onClick={() => setViewDiscover(!viewDiscover)}>
                         <div className=' font-medium'>Discover</div>
                         <div className='md:hidden text-lg mb-2'>{viewDiscover ? < AiOutlineUp /> : < AiOutlineDown />}</div>
@@ -61,7 +61,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                <div className='py-4 border-text border-b-2 space-y-2 md:border-none'>
                     <div className='flex justify-between items-center' onClick={() => setViewTerms(!viewTerms)}>
                         <div className=' font-medium'>Terms and settings</div>
                         <div className='md:hidden text-lg mb-2'>{viewTerms ? < AiOutlineUp /> : < AiOutlineDown />}</div>
@@ -82,7 +82,7 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                <div className='py-4 border-text border-b-2 space-y-2 md:border-none'>
                     <div className='flex justify-between items-center' onClick={() => setViewPartners(!viewPartners)}>
                         <div className=' font-medium'>Partners</div>
                         <div className='md:hidden text-lg mb-2'>{viewPartners ? < AiOutlineUp /> : < AiOutlineDown />}</div>
@@ -103,14 +103,14 @@ function Footer() {
                     </div>
                 </div>
 
-                <div className='py-4 border-b-2 space-y-2 md:border-none'>
+                <div className='py-4 border-text border-b-2 space-y-2 md:border-none'>
                     <div className='flex justify-between items-center' onClick={() => setViewAbout(!viewAbout)}>
                         <div className=' font-medium'>About</div>
                         <div className='md:hidden text-lg mb-2'>{viewAbout ? < AiOutlineUp /> : < AiOutlineDown />}</div>
                     </div>
                     {viewAbout && (
                         <div className='space-y-2 md:hidden'>
-                            <div className='text-sm'> About Booking.com</div>
+                            <div className='text-sm'> About TC.tours.com</div>
                             <div className='text-sm'> How We Work</div>
                             <div className='text-sm'> Sustainability</div>
                             <div className='text-sm'> Press center</div>
@@ -120,7 +120,7 @@ function Footer() {
                         </div>
                     )}
                     <div className='space-y-2 hidden md:block'>
-                        <div className='text-sm'> About Booking.com</div>
+                        <div className='text-sm'> About Tc.tours.com</div>
                         <div className='text-sm'> How We Work</div>
                         <div className='text-sm'> Sustainability</div>
                         <div className='text-sm'> Press center</div>
@@ -132,7 +132,7 @@ function Footer() {
 
                 </div>
 
-                <div className='flex justify-center items-center py-7 border-b-2 space-x-5'>
+                <div className='flex justify-center items-center py-7 border-text border-b-2 space-x-5'>
                     <span className=''>
                         <img src={india} alt='india' className='h-5 w-5' />
                     </span>

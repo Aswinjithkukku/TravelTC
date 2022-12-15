@@ -1,3 +1,4 @@
-import excursionSlice from "./excursionSlice";
+import excursionReducer from "./excursionSlice";
+import generalReducer from "./generalSlice";
 
-export { excursionSlice }
+export { excursionReducer, generalReducer }

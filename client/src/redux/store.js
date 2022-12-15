@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import excursionReducer from "./slices/excursionSlice";
+import { excursionReducer, generalReducer } from './slices'
 
 const store = configureStore({
   reducer: {
     excursion: excursionReducer,
+    general: generalReducer,
   },
   devTools: true,
 });

@@ -19,26 +19,26 @@ function Register({ setViewRegister, setViewlogin, viewlogin, viewRegister }) {
                   <div className='text-sm text-text'>when an unknown printer took a galley of type and scrambled </div>
                 </div>
               </div>
-              <div className='w-4/12 registercard h-[90%] rounded-2xl'>
+              <div className='w-4/12 loginCard shadow-md h-[90%] rounded-2xl'>
                 <div className='p-5 space-y-3'>
-                  <div className='text-4xl text-soft font-semibold'>Greetings...</div>
+                  <div className='text-4xl text-blue font-semibold'>Greetings...</div>
                   <div className='space-y-2'>
-                    <label className='text-semisoft '> Name</label>
-                    <input type='text' placeholder='Tell us Your Name' className='w-full placeholder:text-light bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-light' />
+                    <label className='text-text '> Name</label>
+                    <input type='text' placeholder='Tell us Your Name' className='w-full placeholder:text-bluetrans bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-bluetrans' />
                   </div>
                   <div className='space-y-2'>
-                    <label className='text-semisoft '> Email</label>
-                    <input type='email' placeholder='Enter Your Email' className='w-full placeholder:text-light bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-light ' />
+                    <label className='text-text '> Email</label>
+                    <input type='email' placeholder='Enter Your Email' className='w-full placeholder:text-bluetrans bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-bluetrans ' />
                   </div>
                   <div className='space-y-2'>
-                    <label className='text-semisoft '> PhoneNumber</label>
-                    <input type='number' placeholder='Enter Your Phone Number' className='w-full placeholder:text-light bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-light' />
+                    <label className='text-text '> PhoneNumber</label>
+                    <input type='number' placeholder='Enter Your Phone Number' className='w-full placeholder:text-bluetrans bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-bluetrans' />
                   </div>
                   <div className='space-y-2'>
-                    <label className='text-semisoft '> Password</label>
-                    <input type='password' placeholder='Give a password' className='w-full placeholder:text-light bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-light' />
+                    <label className='text-text '> Password</label>
+                    <input type='password' placeholder='Give a password' className='w-full placeholder:text-bluetrans bg-trans py-3 text-sm rounded-xl px-2 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 text-bluetrans' />
                   </div>
-                  <div className='text-semisoft'>
+                  <div className='text-text'>
                     <span className='text-xs'>By register you agree to our</span>
                     <span className='text-xs text-blue hover:text-sky-500 cursor-pointer underline'>{' '} Terms and Conditions</span>
                   </div>
@@ -50,17 +50,17 @@ function Register({ setViewRegister, setViewlogin, viewlogin, viewRegister }) {
 
                   </div>
                   <div className='flex items-center justify-between pt-2'>
-                    <button className='flex items-center space-x-2 bg-trans w-full mx-3 justify-center py-2 rounded-xl hover:bg-light hover:text-blue text-light duration-200'>
+                    <button className='flex items-center space-x-2 bg-trans w-full mx-3 justify-center py-2 rounded-xl hover:bg-light hover:text-blue text-bluetrans duration-200'>
                       <span className=''><FcGoogle /></span>
                       <span className=''>Google</span>
                     </button>
-                    <button className='flex items-center space-x-2 bg-trans w-full mx-3 justify-center py-2 rounded-xl hover:bg-light hover:text-blue text-light duration-200'>
+                    <button className='flex items-center space-x-2 bg-trans w-full mx-3 justify-center py-2 rounded-xl hover:bg-light hover:text-blue text-bluetrans duration-200'>
                       <span className='text-blue'><BsFacebook /> </span>
                       <span className=''>Facebook</span>
                     </button>
                   </div>
                   <div className='text-sm pt-1'>
-                    <span className='text-light'>Already have an account? {' '}</span>
+                    <span className='text-bluetrans'>Already have an account? {' '}</span>
                     <span className='text-blue underline cursor-pointer' onClick={async () => {
                       await setViewRegister(!viewRegister)
                       await setViewlogin(!viewlogin)

@@ -78,6 +78,7 @@ function Navbar() {
 
         </div>
       )}
+      <div className='h-10 bg-[#002366]'></div>
       <div className='bg-soft'>
         <div className=' py-3 px-3 lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between'>

@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
+import { MdAttractions } from 'react-icons/md'
+import { GiCommercialAirplane } from 'react-icons/gi'
+import { IoIosCar } from 'react-icons/io'
+import { FaHotel, FaWpforms } from 'react-icons/fa'
 import banner from "../../static/images/banner.jpg"
 import dubai from "../../static/images/dubai.jpg"
 import uae from "../../static/images/uae.jpg"
@@ -29,11 +33,11 @@ function HeroSection() {
 
     return (
         <div>
-            <div className='lg:max-w-screen-2xl lg:mx-auto lg:py-14'>
+            <div className='lg:max-w-screen-2xl lg:mx-auto lg:pt-14'>
                 <main className='md:mb-36'>
                     <div className=' relative'>
 
-                        <div className='overflow-hidden lg:rounded-[4em] lg:h-[70vh] relative cover '>
+                        <div className='overflow-hidden lg:rounded-[4em] lg:h-[70vh] relative bg-cover '>
                             <div className='absolute top-0 text-center w-full z-10'>
                                 <div className='text-3xl lg:text-6xl font-bold text-light heading pt-20'>Discover Beautiful Places</div>
                                 <div className='text-light md:text-lg '>Discover this emirate and its dazzling treasures</div>
@@ -57,50 +61,67 @@ function HeroSection() {
                                 showStatus={false}
                                 onChange={updateCurrentSlide}
                             >
-                                <img src={uae} alt='hero' className='bg-cover' />
-                                <img src={dubai} alt='hero' className='bg-cover' />
-                                <img src={banner} alt='hero' className='bg-cover' />
+                                <div className='bg-inherit h-full'>
+                                    <img src={uae} alt='hero' className='bg-cover h-full' />
+                                </div>
+                                <img src={dubai} alt='hero' className='bg-cover h-full' />
+                                <img src={banner} alt='hero' className='bg-cover h-full' />
 
                             </Carousel>
                         </div>
                         <div className='md:absolute z-10 -bottom-20 w-full md:flex justify-center '>
-                            <div className=' md:absolute -top-14 md:-top-12  lg:left-60 md:left-40  md:right-40 lg:right-auto bg-light rounded-t-[2em] '>
-                                <div className='grid grid-cols-5 space-x-1 px-3 md:px-10 py-3 md:py-1 items-center '>
-                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewAttraction ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                            <div className=' absolute top-56  md:-top-12  lg:left-60 md:left-40  md:right-40 lg:right-auto bg-light rounded-t-2xl md:rounded-t-[1em] '>
+                                <div className='grid grid-cols-5 space-x-1 px-1 md:px-10 py-3 md:py-1 items-center '>
+                                    <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1 ${viewAttraction ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
                                         await setViewFlight(false)
                                         await setViewHotel(false)
                                         await setViewVisa(false)
                                         await setViewCar(false)
                                         await setViewAttraction(true)
-                                    }}>Attraction</button>
-                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewFlight ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                    }}>
+                                        <span className=''><MdAttractions /> </span>
+                                        <span className=''>Attraction</span>
+                                    </button>
+                                    <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1  ${viewFlight ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
                                         await setViewAttraction(false)
                                         await setViewHotel(false)
                                         await setViewVisa(false)
                                         await setViewCar(false)
                                         await setViewFlight(true)
-                                    }}>Flight</button>
-                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewHotel ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                    }}>
+                                        <span className=''><GiCommercialAirplane /> </span>
+                                        <span className=''>Flight</span>
+                                    </button>
+                                    <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1  ${viewHotel ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
                                         await setViewAttraction(false)
                                         await setViewVisa(false)
                                         await setViewCar(false)
                                         await setViewFlight(false)
                                         await setViewHotel(true)
-                                    }}>Hotel</button>
-                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewVisa ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                    }}>
+                                        <span className=''><FaHotel /> </span>
+                                        <span className=''>Hotel</span>
+                                    </button>
+                                    <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1  ${viewVisa ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
                                         await setViewAttraction(false)
                                         await setViewHotel(false)
                                         await setViewCar(false)
                                         await setViewFlight(false)
                                         await setViewVisa(true)
-                                    }}>Visa</button>
-                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewCar ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                    }}>
+                                        <span className=''><FaWpforms /> </span>
+                                        <span className=''>Visa</span>
+                                    </button>
+                                    <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1  ${viewCar ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
                                         await setViewAttraction(false)
                                         await setViewHotel(false)
                                         await setViewVisa(false)
                                         await setViewFlight(false)
                                         await setViewCar(true)
-                                    }}>Car</button>
+                                    }}>
+                                        <span className=''><IoIosCar /> </span>
+                                        <span className=''>Car</span>
+                                    </button>
                                 </div>
                             </div>
                             <div className='bg-light w-full md:w-9/12 md:rounded-[2em] relative'>
@@ -110,7 +131,7 @@ function HeroSection() {
                                     )}
 
                                     {viewFlight && (
-                                           <FlightCard />
+                                        <FlightCard />
                                     )}
                                     {viewHotel && (
                                         <HotelCard />

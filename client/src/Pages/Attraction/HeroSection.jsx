@@ -13,6 +13,7 @@ import AttractionCard from '../../components/Attractions/AttractionCard'
 import FlightCard from '../../components/Attractions/FlightCard'
 import HotelCard from '../../components/Attractions/HotelCard'
 import CarCard from '../../components/Attractions/CarCard'
+import { IoLocationOutline } from 'react-icons/io5'
 
 function HeroSection() {
     const [viewAttraction, setViewAttraction] = useState(true)
@@ -43,8 +44,9 @@ function HeroSection() {
                                 <div className='text-light md:text-lg '>Discover this emirate and its dazzling treasures</div>
                                 {/* <div className='hidden md:block text-light bg-trans text-2xl mt-24 py-10'>Explore Your Destination </div> */}
 
-                                <div className='hidden md:flex justify-between  mx-auto max-w-3xl'>
+                                <div className='hidden md:flex justify-between  items-center mt-[26em] mx-10 max-w-8xl'>
                                     <span className='text-3xl font-bold text-darktext bg-trans hover:bg-soft h-16 w-16 rounded-full flex justify-center items-center' onClick={() => setCurrentSlide(currentSlide - 1)}><AiOutlineLeft /> </span>
+                                    <span className='text-3xl text-light font-lg space-x-1 flex '><IoLocationOutline /> Dubai</span>
                                     <span className='text-3xl font-bold text-darktext bg-trans hover:bg-soft h-16 w-16 rounded-full flex justify-center items-center' onClick={() => setCurrentSlide(currentSlide + 1)}><AiOutlineRight /></span>
                                 </div>
                             </div>
@@ -69,7 +71,7 @@ function HeroSection() {
 
                             </Carousel>
                         </div>
-                        <div className='md:absolute z-10 -bottom-20 w-full md:flex justify-center '>
+                        <div className='md:absolute z-10 bottom-36 w-full md:flex justify-center '>
                             <div className=' absolute top-56  md:-top-12  lg:left-60 md:left-40  md:right-40 lg:right-auto bg-light rounded-t-2xl md:rounded-t-[1em] '>
                                 <div className='grid grid-cols-5 space-x-1 px-1 md:px-10 py-3 md:py-1 items-center '>
                                     <button className={`flex justify-center text-sm md:text-base items-center md:px-3 py-2 rounded-t-xl  hover:text-text hover:bg-blue duration-300 space-x-1 ${viewAttraction ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {

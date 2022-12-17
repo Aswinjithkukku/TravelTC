@@ -1,9 +1,15 @@
 import MainLayout from "./MainLayout";
 
-import AttractionHomePage from "../Pages/Hero/AttractionHomePage";
+// import AttractionHomePage from "../Pages/Hero/AttractionHomePage";
 // import AttractionLandingPage from "../Pages/Base/AttractionLandingPage";
-import {BaseAttractionDetailsPage, BaseAttractionLandingPage, BaseDemo} from "../Pages/Base";
-import AttractionHomePageTwo from "../Pages/Hero/AttractionHomePageTwo";
+// import {BaseAttractionDetailsPage, BaseAttractionLandingPage, BaseDemo} from "../Pages/Base";
+import {
+    AttractionHomePage,
+    AttractionDetailsPage,
+    AttractionLandingPage,
+    AttractionHomePageTwo
+} from '../Pages/Hero'
+// import AttractionHomePageTwo from "../Pages/Hero/AttractionHomePageTwo";
 
 const ThemeRoutes = [
     {
@@ -14,9 +20,9 @@ const ThemeRoutes = [
         children: [
             { path: "", element: <AttractionHomePage /> },
             { path: "/home", element: <AttractionHomePageTwo /> },
-            { path: "/attraction", element: <BaseAttractionLandingPage /> },
-            { path: "/details", element: <BaseAttractionDetailsPage /> },
-            { path: "/demo", element: <BaseDemo /> }
+            { path: "/attraction", element: <AttractionLandingPage /> },
+            { path: "/details", element: <AttractionDetailsPage /> },
+            // { path: "/demo", element: <BaseDemo /> }
         ]
     },
 ]

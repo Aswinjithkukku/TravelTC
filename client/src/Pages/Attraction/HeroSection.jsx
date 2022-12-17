@@ -1,163 +1,125 @@
 import React, { useState } from 'react'
-import { CgProfile } from 'react-icons/cg'
-import { AiOutlineMenu, AiOutlineQuestionCircle, AiOutlineSearch } from 'react-icons/ai'
-import { CgSmartphone } from "react-icons/cg";
-import { GrClose } from 'react-icons/gr'
-// import { NavbarLinks } from '../../data'
-import { MenuLinks } from '../../data'
-import india from '../../static/images/india.png'
-import { Link } from 'react-router-dom';
-
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import banner from "../../static/images/banner.jpg"
 import dubai from "../../static/images/dubai.jpg"
 import uae from "../../static/images/uae.jpg"
-import { IoLocationOutline } from 'react-icons/io5';
-import { BsCalendar2Date } from 'react-icons/bs';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+import AttractionCard from '../../components/Attractions/AttractionCard'
+import FlightCard from '../../components/Attractions/FlightCard'
+import HotelCard from '../../components/Attractions/HotelCard'
+import CarCard from '../../components/Attractions/CarCard'
 
 function HeroSection() {
-    const [viewMenu, setViewMenu] = useState(false)
+    const [viewAttraction, setViewAttraction] = useState(true)
+    const [viewFlight, setViewFlight] = useState(false)
+    const [viewHotel, setViewHotel] = useState(false)
+    const [viewVisa, setViewVisa] = useState(false)
+    const [viewCar, setViewCar] = useState(false)
+
+
+
+    const [currentSlide, setCurrentSlide] = useState(0)
+
+    const updateCurrentSlide = (index) => {
+        if (currentSlide !== index) {
+            setCurrentSlide(index)
+        }
+    }
+
     return (
         <div>
-            <>
-                {viewMenu && (
-                    <div className='fixed h-screen bg-light w-screen z-50'>
-                        <div className='flex justify-end text-2xl m-5' onClick={() => setViewMenu(!viewMenu)} ><GrClose /> </div>
-
-                        <div className='mx-7 text-lg text-text space-y-7'>
-
-                            <div className='text-2xl font-semibold text-black'>More</div>
-
-                            <div className='space-y-5'>
-                                <div className=' space-x-4'>
-                                    <span className=''>INR</span>
-                                    <span className=''>Indian Rupee</span>
-                                </div>
-                                <div className='flex space-x-4'>
-                                    <span className=''>
-                                        <img src={india} alt='india' className='w-7 h-7' />
-                                    </span>
-                                    <span className=''>English (US)</span>
-                                </div>
-                                <div className='flex items-center space-x-4'>
-                                    <span className='text-2xl'><CgSmartphone /> </span>
-                                    <span className=''>Download the iphone app</span>
-                                </div>
-                            </div>
-
-                            <div className='space-y-5'>
-                                <div className='font-semibold text-black'>Help and Support</div>
-                                {MenuLinks?.helpAndSupport?.map((item) => (
-                                    <div className='flex items-center space-x-4'>
-                                        <span className=''>{item.icon} </span>
-                                        <span className=''>{item.name} </span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className='space-y-5'>
-                                <div className='font-semibold text-black'>Inspiration</div>
-                                {MenuLinks?.inspiration?.map((item) => (
-                                    <div className='flex items-center space-x-4'>
-                                        <span className=''>{item.icon} </span>
-                                        <span className=''>{item.name} </span>
-                                    </div>
-                                ))}
-                            </div>
-
-                            <div className='space-y-5'>
-                                <div className='font-semibold text-black'>Settings and legal</div>
-                                {MenuLinks?.settingsAndLegal?.map((item) => (
-                                    <div className='flex items-center space-x-4'>
-                                        <span className=''>{item.icon} </span>
-                                        <span className=''>{item.name}</span>
-                                    </div>
-                                ))}
-                            </div>
-
-                        </div>
-
-                    </div>
-                )}
-                <div className='bg-semisoft'>
-                    <div className=' py-3 px-3 lg:max-w-screen-xl lg:mx-auto'>
-                        <div className='flex justify-between'>
-                            <Link to='/'>
-                                <div className='text-3xl font-bold text-main'>TC tours</div>
-                            </Link>
-                            <div className='flex space-x-5'>
-                                <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span>
-                                <span className='lg:hidden flex items-center text-stone-600 text-2xl' onClick={() => setViewMenu(!viewMenu)}><AiOutlineMenu /></span>
-                                <span className='hidden lg:flex items-center text-stone-600 text-lg font-semibold'>INR</span>
-                                <span className='hidden lg:flex items-center text-stone-600 text-2xl'><img src={india} alt='india' className='h-6 w-6' /></span>
-                                <span className='hidden lg:flex items-center text-stone-600 text-2xl'><AiOutlineQuestionCircle /> </span>
-                                <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-3 rounded-lg shadow-sm'>Register </span>
-                                <span className='hidden lg:flex items-center text-stone-600 text-sm bg-light px-3 py-3 rounded-lg shadow-sm'>Sign in</span>
-                            </div>
-                        </div>
-                        <div className=' mt-2'>
-                            {/* <div className=''>
-              <div className='flex space-x-2 overflow-x-auto'>
-                {NavbarLinks?.map((link) => (
-                  <button className='flex space-x-1 items-center hover:bg-light px-3 py-1 rounded-full cursor-pointer  focus:border-2 box-border  '>
-                    <span className='text-text'>
-                      {link.icon}
-                    </span>
-                    <span className='whitespace-nowrap text-text'>
-                      {link.name}
-                    </span>
-                  </button>
-                ))}
-              </div>
-            </div> */}
-                        </div>
-                    </div>
-                </div>
-            </>
-            <div className='lg:max-w-screen-xl lg:mx-auto lg:my-14'>
-                <main className='mb-36'>
+            <div className='lg:max-w-screen-2xl lg:mx-auto lg:py-14'>
+                <main className='md:mb-36'>
                     <div className=' relative'>
-                        <div className='absolute z-50 -bottom-20 w-full flex justify-center'>
-                            <div className='bg-light w-9/12 rounded-[2em]'>
-                                <div className='lg:grid lg:grid-cols-12 gap-0 py-7'>
-                                    <div className='col-span-5 flex justify-center items-center border-r-2 border-bluetrans'>
-                                        <div className='space-y-2'>
-                                            <div className='flex items-center space-x-2 text-darktext'>
-                                                <span className='text-2xl text-blue'><IoLocationOutline /> </span>
-                                                <span className='text-lg '>Destination</span>
-                                            </div>
-                                            <div className=''>
-                                                <input type='text' placeholder='Where do you want to go?' className='border-none placeholder:text-text py-3' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='col-span-5 flex justify-center items-center border-r-2 border-bluetrans'>
-                                    <div className='space-y-2'>
-                                            <div className='flex items-center space-x-2 text-darktext'>
-                                                <span className='text-2xl text-blue'><BsCalendar2Date /> </span>
-                                                <span className='text-lg'>Date</span>
-                                            </div>
-                                            <div className=''>
-                                                <input type='date' placeholder='Choose date' className='border-none placeholder:text-text py-3' />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='col-span-2 flex justify-center items-center'>
-                                        <div className=''>
-                                            <button className='h-14 w-14 bg-blue rounded-full text-light text-3xl flex justify-center items-center'>
-                                                <AiOutlineSearch />
-                                            </button>
-                                        </div>
-                                    </div>
+
+                        <div className='overflow-hidden lg:rounded-[4em] lg:h-[70vh] relative cover '>
+                            <div className='absolute top-0 text-center w-full z-10'>
+                                <div className='text-3xl lg:text-6xl font-bold text-light heading pt-20'>Discover Beautiful Places</div>
+                                <div className='text-light md:text-lg '>Discover this emirate and its dazzling treasures</div>
+                                {/* <div className='hidden md:block text-light bg-trans text-2xl mt-24 py-10'>Explore Your Destination </div> */}
+
+                                <div className='hidden md:flex justify-between  mx-auto max-w-3xl'>
+                                    <span className='text-3xl font-bold text-darktext bg-trans hover:bg-soft h-16 w-16 rounded-full flex justify-center items-center' onClick={() => setCurrentSlide(currentSlide - 1)}><AiOutlineLeft /> </span>
+                                    <span className='text-3xl font-bold text-darktext bg-trans hover:bg-soft h-16 w-16 rounded-full flex justify-center items-center' onClick={() => setCurrentSlide(currentSlide + 1)}><AiOutlineRight /></span>
                                 </div>
                             </div>
+                            <Carousel
+                                infiniteLoop
+                                autoPlay
+                                showThumbs={false}
+                                interval={9000}
+                                showArrows={false}
+                                stopOnHover
+                                swipeable={false}
+                                selectedItem={currentSlide}
+                                showIndicators={false}
+                                showStatus={false}
+                                onChange={updateCurrentSlide}
+                            >
+                                <img src={uae} alt='hero' className='bg-cover' />
+                                <img src={dubai} alt='hero' className='bg-cover' />
+                                <img src={banner} alt='hero' className='bg-cover' />
+
+                            </Carousel>
                         </div>
-                        <div className='overflow-hidden lg:rounded-[4em] lg:h-[70vh] relative cover '>
-                            <div className='absolute top-0 text-center w-full'>
-                                <div className='text-3xl lg:text-6xl font-bold text-light heading pt-20'>Discover Beautiful Places</div>
-                                <div className='text-light text-lg'>Discover this emirate and its dazzling treasures</div>
-                                {/* <div className='hidden md:block text-light bg-trans text-2xl mt-24 py-10'>Explore Your Destination </div> */}
+                        <div className='md:absolute z-10 -bottom-20 w-full md:flex justify-center '>
+                            <div className=' md:absolute -top-14 md:-top-12  lg:left-60 md:left-40  md:right-40 lg:right-auto bg-light rounded-t-[2em] '>
+                                <div className='grid grid-cols-5 space-x-1 px-3 md:px-10 py-3 md:py-1 items-center '>
+                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewAttraction ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                        await setViewFlight(false)
+                                        await setViewHotel(false)
+                                        await setViewVisa(false)
+                                        await setViewCar(false)
+                                        await setViewAttraction(true)
+                                    }}>Attraction</button>
+                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewFlight ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                        await setViewAttraction(false)
+                                        await setViewHotel(false)
+                                        await setViewVisa(false)
+                                        await setViewCar(false)
+                                        await setViewFlight(true)
+                                    }}>Flight</button>
+                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewHotel ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                        await setViewAttraction(false)
+                                        await setViewVisa(false)
+                                        await setViewCar(false)
+                                        await setViewFlight(false)
+                                        await setViewHotel(true)
+                                    }}>Hotel</button>
+                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewVisa ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                        await setViewAttraction(false)
+                                        await setViewHotel(false)
+                                        await setViewCar(false)
+                                        await setViewFlight(false)
+                                        await setViewVisa(true)
+                                    }}>Visa</button>
+                                    <button className={` md:px-3 py-2 rounded-full  hover:text-text hover:bg-blue duration-300 ${viewCar ? "bg-lightblue text-light" : "text-blue bg-trans"}`} onClick={async () => {
+                                        await setViewAttraction(false)
+                                        await setViewHotel(false)
+                                        await setViewVisa(false)
+                                        await setViewFlight(false)
+                                        await setViewCar(true)
+                                    }}>Car</button>
+                                </div>
                             </div>
-                            <img src={uae} alt='hero' className='cover' />
+                            <div className='bg-light w-full md:w-9/12 md:rounded-[2em] relative'>
+                                <>
+                                    {viewAttraction && (
+                                        <AttractionCard />
+                                    )}
+
+                                    {viewFlight && (
+                                           <FlightCard />
+                                    )}
+                                    {viewHotel && (
+                                        <HotelCard />
+                                    )}
+                                    {viewCar && (
+                                        <CarCard />
+                                    )}
+                                </>
+                            </div>
                         </div>
                     </div>
                 </main>

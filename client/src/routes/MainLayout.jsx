@@ -5,6 +5,7 @@ import { Footer, Navbar } from "../components/Layouts";
 export default function MainLayout() {
     return (
         <main>
+            <Navbar/>
             <Outlet />
             <Footer />
         </main>

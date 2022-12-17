@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux'
 import { getExcursions } from '../../redux/slices/excursionSlice'
 import { getState } from '../../redux/slices/generalSlice'
 import { useParams } from 'react-router-dom'
+import { BsWhatsapp } from 'react-icons/bs'
 
 function AttractionLandingPage() {
   const dispatch = useDispatch()
@@ -18,7 +19,7 @@ function AttractionLandingPage() {
 },[dispatch])
 
   return (
-    <div>
+    <div className='relative'>
       <div className='lg:max-w-screen-xl lg:mx-auto '>
         <Navigator />
         <div className=' mx-5 my-7 lg:mx-0 space-y-3'>
@@ -34,6 +35,12 @@ function AttractionLandingPage() {
           </span>
         </div>
         
+      </div>
+      <div className='hidden lg:block fixed bottom-20 left-14 '>
+        <div className='px-3 py-3 rounded-full text-light space-x-3 h-16 w-16 bg-green-500 flex items-center justify-center hover:scale-105 duration-300 transition-all'>
+        <span className='text-3xl'> <BsWhatsapp/> </span>
+        {/* <span className=''>Chat with us</span> */}
+        </div>
       </div>
     </div>
   )

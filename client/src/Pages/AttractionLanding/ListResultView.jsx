@@ -22,8 +22,8 @@ function ListResultView({ id }) {
                     excursions?.map((item) => ( */}
                  {AttractionLandingLinks?.map((item) => (
                     <div className='lg:grid lg:grid-cols-12 gap-10 text-text bg-soft items-center my-5 lg:my-0 rounded-xl lg:rounded-lg group'>
-                        <div className='col-span-5 z-50 '>
-                            <img src={item.img} alt={item.name} className='bg-no-repeat cover rounded-xl h-56 md:h-96 lg:h-72 w-full  lg:group-hover:scale-105 group-hover:shadow-sm transition-all duration-800' />
+                        <div className='col-span-5 z-10 p-3'>
+                            <img src={item.img} alt={item.name} className='bg-no-repeat cover rounded-xl h-56 md:h-96 lg:h-72 w-full   group-hover:shadow-sm transition-all duration-800' />
                         </div>
                         <div className='col-span-7 px-4 lg:px-0 space-y-4 my-3'>
                             <p className='font-light text-dark text-lg'>{item.place} </p>

@@ -1,6 +1,4 @@
 import React from 'react'
-import { AiFillStar } from 'react-icons/ai'
-import { NearbyDestinations } from '../../data'
 import banner from '../../static/images/banner.jpg'
 
 function BlogSection() {
@@ -8,15 +6,15 @@ function BlogSection() {
         <div className='my-10 lg:max-w-screen-xl lg:mx-auto'>
             <div className='space-y-5'>
 
-                <div className='text-4xl font-semibold  flex justify-start lg:mx-0 mx-5'>
+                {/* <div className='text-4xl font-semibold  flex justify-start lg:mx-0 mx-5'>
                     <div className='text-darktext'>Blog</div>
-                </div>
+                </div> */}
                 <div className='space-y-3 p-5 bg-trans shadow-sm lg:rounded-2xl py-14'>
                     <div className='flex justify-between items-center'>
                         <div className='text-darktext text-3xl font-medium'>
-                            Loreum ipsum
+                            Blog
                         </div>
-                        <div className='px-7 mr-2 hover:bg-soft bg-light text-main shadow-sm py-2 rounded-md'>View</div>
+                        <div className='px-7 mr-2 hover:bg-soft bg-blue text-light shadow-sm py-2 rounded-md'>View</div>
                     </div>
                     <div className=' gap-5 lg:grid grid-cols-3'>
                         <div className=' mt-2 bg-light p-3 rounded-3xl'>
@@ -32,6 +30,7 @@ function BlogSection() {
                                         Sem et tortor consequat id porta nibh venenatis.
                                         Egestas purus viverra accumsan in nisl nisi scelerisque eu. Risus feugiat in ante metus dictum at tempor commodo ullamcorper.
                                     </div>
+                                    <i className='text-bluetrans font-light text-sm '>15th April 2022</i>
                                 </div>
                             </div>
                         </div>
@@ -49,6 +48,7 @@ function BlogSection() {
                                         Sem et tortor consequat id porta nibh venenatis.
                                         Egestas purus viverra accumsan in nisl nisi scelerisque eu. Risus feugiat in ante metus dictum at tempor commodo ullamcorper.
                                     </div>
+                                    <i className='text-bluetrans font-light text-sm '>15th April 2022</i>
                                 </div>
                             </div>
                         </div>
@@ -66,6 +66,7 @@ function BlogSection() {
                                         Sem et tortor consequat id porta nibh venenatis.
                                         Egestas purus viverra accumsan in nisl nisi scelerisque eu. Risus feugiat in ante metus dictum at tempor commodo ullamcorper.
                                     </div>
+                                    <i className='text-bluetrans font-light text-sm '>15th April 2022</i>
                                 </div>
                             </div>
                         </div>

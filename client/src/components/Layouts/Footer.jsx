@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
-import india from '../../static/images/india.png'
+import travellersChoice from '../../static/images/travellersChoice.png'
 
 function Footer() {
 
@@ -133,15 +133,14 @@ function Footer() {
                 </div>
 
                 <div className='flex justify-center items-center py-7 border-text border-b-2 space-x-5'>
-                    <span className=''>
-                        <img src={india} alt='india' className='h-5 w-5' />
-                    </span>
-                    <span className='text-xl'>INR</span>
+                    <div className=''>
+                        <img src={travellersChoice} alt='tc' className='h-10 md:h-auto' />
+                    </div>
                 </div>
 
                 <div className='text-text text-xs py-5 text-center leading-relaxed space-y-2'>
                     <div className=''>Booking.com is part of Booking Holdings Inc., the world leader in online travel and related services.</div>
-                    <div className=''>Copyright © 1996–2022 Booking.com™. All rights reserved.</div>
+                    <div className=''>Copyright © 1996–2022 TravellersChoice.com™. All rights reserved.</div>
                 </div>
 
             </div>

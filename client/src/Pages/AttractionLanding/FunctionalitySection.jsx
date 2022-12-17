@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { BiSortAlt2, BiSearch } from 'react-icons/bi'
+import { TfiHeadphoneAlt } from 'react-icons/tfi'
 import { FiFilter } from 'react-icons/fi'
-import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
+import { BsWhatsapp } from 'react-icons/bs'
+import { AiOutlineClose, AiOutlineDown, AiOutlineMail, AiOutlineUp } from 'react-icons/ai'
 import { FilterData } from '../../data'
 import { useSelector } from 'react-redux'
 
@@ -15,7 +17,37 @@ function FunctionalitySection() {
 
     return (
         <>
-            <div className='lg:max-w-6xl lg:mx-auto bg-blue lg:rounded-xl px-5 py-7 lg:my-0'>
+                    <div className='hidden lg:block bg-soft rounded-xl py-5 mb-10'>
+                <div className='p-3 text-text space-y-3'>
+                    <div className='text-2xl text-darktext'>
+                        Need Help?
+                    </div>
+                    <div className='flex items-center space-x-3 ml-3'>
+                        <div className='text-2xl text-blue'><TfiHeadphoneAlt /> </div>
+                        <div className='space-y-2'>
+                            <div className='text-main'>Call us on</div>
+                            <div className=''>+910000000000</div>
+                            <div className=''>+910000000000</div>
+                        </div>
+                    </div>
+                    <div className='flex items-center space-x-3 ml-3'>
+                        <div className='text-2xl text-green-600'><BsWhatsapp /> </div>
+                        <div className='space-y-2'>
+                            <div className='text-main'>Whatsapp us on</div>
+                            <div className=''>+910000000000</div>
+                        </div>
+                    </div>
+                    <div className='flex items-center space-x-3 ml-3'>
+                        <div className='text-2xl text-blue'><AiOutlineMail /> </div>
+                        <div className='space-y-2'>
+                            <div className='text-main'>Email us on</div>
+                            <div className=''>test123@email.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className=' bg-blue lg:rounded-xl px-5 py-7 lg:my-0'>
 
                 {/* <div className='md:grid lg:grid-cols-12 md:gap-5'></div> */}
                 <div className=''>
@@ -119,10 +151,10 @@ function FunctionalitySection() {
                             {viewcity && (
                                 <>
                                     {/* {FilterData?.city?.map((item) => ( */}
-                                    {state?.map((item) => (
+                                    {FilterData?.city?.map((item) => (
                                         <div className='flex items-center space-x-4'>
                                             <input type='checkbox' className='w-5 h-5' />
-                                            <span className=''>{item.state} </span>
+                                            <span className=''>{item.name} </span>
                                         </div>
                                     ))}
                                 </>
@@ -157,6 +189,8 @@ function FunctionalitySection() {
                     </div>
                 </div>
             </div>
+
+
 
         </>
     )

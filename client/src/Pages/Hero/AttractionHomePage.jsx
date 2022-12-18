@@ -16,11 +16,11 @@ function AttractionHomePage() {
     <div className='bg-soft space-y-20'>
       <HeroSection />
       <SpecialofferCardSection />
-      <InfoSection />
       <FeatureSection />
       <ActivityAndTourSection />
       <AttractionsAndLandmarkSection />
       <TopSellingSection />
+      <InfoSection />
       <AttractionCardSection />
       <BlogSection />
       <NearbySection />

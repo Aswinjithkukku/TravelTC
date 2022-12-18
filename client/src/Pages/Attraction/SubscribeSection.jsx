@@ -3,13 +3,13 @@ import  { GiIsland } from 'react-icons/gi'
 
 function SubscribeSection() {
   return (
-    <div className='bg-semisoft'>
+    <div className='bg-lightblue'>
         <div className='lg:max-w-screen-xl lg:mx-auto'>
             <div className='lg:flex space-x-10 py-20 lg:px-20 space-y-3'>
-                <div className='text-6xl flex justify-center items-center'>
+                <div className='text-6xl flex justify-center items-center text-semisoft'>
                     <GiIsland />
                 </div>
-                <div className=''>
+                <div className='text-light'>
                     <div className='text-3xl'>Get Updates & More</div>
                     <div className='text-lg font-light'>Thoughtful thoughts to your inbox</div>
                 </div>

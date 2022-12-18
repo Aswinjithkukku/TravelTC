@@ -7,18 +7,24 @@ import FeatureSection from '../Attraction/FeatureSection'
 import InfoSection from '../Attraction/InfoSection'
 import NearbySection from '../Attraction/NearbySection'
 import TopSellingSection from '../Attraction/TopSellingSection'
+import SpecialofferCardSection from '../Attraction/SpecialofferCardSection'
+import AttractionCardSection from '../Attraction/AttractionCardSection'
+import SubscribeSection from '../Attraction/SubscribeSection'
 
 function AttractionHomePage() {
   return (
     <div className='bg-soft space-y-20'>
       <HeroSection />
+      <SpecialofferCardSection />
       <InfoSection />
       <FeatureSection />
       <ActivityAndTourSection />
       <AttractionsAndLandmarkSection />
       <TopSellingSection />
+      <AttractionCardSection />
       <BlogSection />
       <NearbySection />
+      <SubscribeSection />
     </div>
   )
 }

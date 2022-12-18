@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
   margin: 0;
@@ -10,15 +10,14 @@
   box-sizing: border-box;
 }
 
- body{
-  font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
 ::-webkit-scrollbar {
-  width: .5em;
+  width: 0.5em;
   height: 1em;
 }
-
 
 ::-webkit-scrollbar-track {
   background: rgb(43, 43, 43);
@@ -32,40 +31,40 @@
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(120 100% 10% / 1);
 }
-::-webkit-scrollbar:horizontal{
+::-webkit-scrollbar:horizontal {
   display: none;
 }
 
 .heading {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .banner {
-  background-image: url('./static/images/uae.jpg');
+  background-image: url("./static/images/uae.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bgdubai {
-  background-image: url('./static/images/bgdubai.jpg');
+  background-image: url("./static/images/bgdubai.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .bglogindubai {
-  background-image: url('./static/images/login.jpg');
+  background-image: url("./static/images/login.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .glass {
-    backdrop-filter: blur(13px) saturate(107%);
-    -webkit-backdrop-filter: blur(13px) saturate(107%);
-    background-color: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(209, 213, 219, 0.3);
+  backdrop-filter: blur(13px) saturate(107%);
+  -webkit-backdrop-filter: blur(13px) saturate(107%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(209, 213, 219, 0.3);
 }
 
-.switch[type=checkbox]{
+.switch[type="checkbox"] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -83,7 +82,7 @@
 }
 
 .forswitch:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 5px;
   left: 5px;
@@ -122,9 +121,25 @@
 }
 
 .loginCard {
-background: rgba( 255, 255, 255, 0.55 );
-/* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+  background: rgba(255, 255, 255, 0.55);
+  /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.specialoffer {
+  background-image: url("./static/images/specialoffer2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.combooffer {
+  background-image: url("./static/images/combo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.attractions {
+  background-image: url("./static/images/attractions.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

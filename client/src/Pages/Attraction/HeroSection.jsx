@@ -34,8 +34,8 @@ function HeroSection() {
 
     return (
         <div>
-            <div className='lg:max-w-screen-2xl lg:mx-auto lg:pt-14'>
-                <main className='md:mb-36'>
+            <div className='lg:max-w-screen-xl lg:mx-auto lg:pt-14'>
+                <main className='md:mb-28'>
                     <div className=' relative'>
 
                         <div className='overflow-hidden lg:rounded-[4em] lg:h-[70vh] relative bg-cover '>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { CgProfile } from 'react-icons/cg'
-import { AiOutlineClose, AiOutlineMenu, AiOutlineQuestionCircle, AiOutlineRight } from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineDown, AiOutlineMenu, AiOutlineQuestionCircle, AiOutlineRight, AiOutlineUp } from 'react-icons/ai'
 import { CgSmartphone } from "react-icons/cg";
 import { GrClose } from 'react-icons/gr'
 import { MenuLinks } from '../../data'
@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom';
 import travellersChoice from '../../static/images/travellersChoice.png'
 import Register from '../Authentication/Register';
 import Login from '../Authentication/Login';
+import { FaFacebookF, FaGooglePlusG, FaInstagram } from 'react-icons/fa';
 
 
 function Navbar() {
@@ -16,6 +17,8 @@ function Navbar() {
   const [viewMenu, setViewMenu] = useState(false)
   const [viewRegister, setViewRegister] = useState(false)
   const [viewlogin, setViewlogin] = useState(false)
+  const [viewCurrency, setViewCurrency] = useState(false)
+  const [viewLanguage, setViewLanguage] = useState(false)
 
   return (
     <>
@@ -78,7 +81,81 @@ function Navbar() {
 
         </div>
       )}
-      <div className='h-10 bg-[#002366]'></div>
+      <div className='hidden md:block bg-[#002366]'>
+        <div className='lg:max-w-screen-xl lg:mx-auto'>
+          <div className='flex justify-between py-2'>
+            <span className='flex text-sm'>
+              <div className='flex items-center text-soft space-x-5 border-r px-5'>
+                <span className=''>
+                  <FaFacebookF />
+                </span>
+                <span className='text-lg'>
+                  <FaInstagram />
+                </span>
+                <span className='text-xl'>
+                  <FaGooglePlusG />
+                </span>
+              </div>
+              <div className='text-soft px-3'> +919822550000</div>
+            </span>
+            <span className='flex text-sm'>
+              <div className='flex px-5 space-x-5 text-soft items-center font-light'>
+                <div className='cursor-pointer'>B2B Login</div>
+                <div className='flex space-x-1 items-center cursor-pointer relative' >
+                  <span className=''>
+                    AED
+                  </span>
+                  <span className=''onClick={() => setViewCurrency(!viewCurrency)}>
+                    {viewCurrency ? <AiOutlineUp /> : <AiOutlineDown />}
+                  </span>
+                  {/* absolute modal */}
+                  {viewCurrency && (
+                  <div className='absolute top-7 -left-8 bg-[#002366]'>
+                    <div className='mx-7 space-y-3 py-2'>
+                      <div className=''>
+                        Euro
+                      </div>
+                      <div className=''>
+                        Rupees
+                      </div>
+                      <div className=''>
+                        Dollar
+                      </div>
+                    </div>
+                  </div>
+                  )}
+                  {/* absolute modal */}
+                </div>
+                <div className='flex space-x-2 items-center cursor-pointer'>
+                  <span className=''>
+                    English
+                  </span>
+                  <span className=''onClick={() => setViewLanguage(!viewLanguage)}>
+                    {viewLanguage ? <AiOutlineUp /> : <AiOutlineDown /> }  
+                  </span>
+                  {/* absolute modal */}
+                  {viewLanguage && (
+                  <div className='absolute top-7  bg-[#002366]'>
+                    <div className='mx-7 space-y-3 py-2'>
+                      <div className=''>
+                        Arab
+                      </div>
+                      <div className=''>
+                        French
+                      </div>
+                      <div className=''>
+                        Hindi
+                      </div>
+                    </div>
+                  </div>
+                  )}
+                  {/* absolute modal */}
+                </div>
+              </div>
+            </span>
+          </div>
+        </div>
+      </div>
       <div className='bg-soft'>
         <div className=' py-3 px-3 lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between'>
@@ -90,9 +167,7 @@ function Navbar() {
             <div className='flex space-x-5'>
               <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span>
               <span className='lg:hidden flex items-center text-stone-600 text-2xl' onClick={() => setViewMenu(!viewMenu)}><AiOutlineMenu /></span>
-              <span className='hidden lg:flex items-center text-stone-600 text-lg font-semibold'>INR</span>
-              <span className='hidden lg:flex items-center text-stone-600 text-2xl'><img src={india} alt='india' className='h-6 w-6' /></span>
-              <span className='hidden lg:flex items-center text-stone-600 text-2xl'><AiOutlineQuestionCircle /> </span>
+              {/* <span className='hidden lg:flex items-center text-stone-600 text-2xl'><AiOutlineQuestionCircle /> </span> */}
               <span className='hidden lg:flex items-center text-light text-sm bg-main px-3  my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewRegister(!viewRegister)}>Register </span>
               <span className='hidden lg:flex items-center text-light text-sm bg-blue px-3  my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewlogin(!viewlogin)}>Sign in</span>
             </div>

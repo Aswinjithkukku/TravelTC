@@ -32,6 +32,9 @@ module.exports = {
         lighttrans: "rgba(255, 255, 255, .2)",
         bluetrans: "rgb(0, 48, 208, .5)",
         maintrans: "rgb(255, 59, 0, .5)",
+        cardyellow: "#f6b756",
+        cardtransblue: "rgba(0, 48, 208, .85)",
+        cardtransyellow: "rgba(246, 183, 86, .8)",
       },
       boxShadow: {
         sm: "0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -2px rgb(0 0 0 / 5%)",

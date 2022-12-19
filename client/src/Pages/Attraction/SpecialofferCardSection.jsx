@@ -31,7 +31,9 @@ function SpecialofferCardSection() {
                                         the best prices on</p>
                                 </div>
                                 <div className='pt-3 mt-20 scale-0 group-hover:scale-100 group-hover:mt-0 transition-all duration-700'>
+                                    <Link to='/specialoffer'>
                                     <button className='py-2 px-3 border-main border text-main  '>See Deals</button>
+                                    </Link>
                                 </div>
                             </div>
 

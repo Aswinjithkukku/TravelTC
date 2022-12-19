@@ -8,7 +8,8 @@ import {
     AttractionDetailsPage,
     AttractionLandingPage,
     AttractionHomePageTwo,
-    ComboLandingPage
+    ComboLandingPage,
+    SpecialOfferLandingPage
 } from '../Pages/Hero'
 // import AttractionHomePageTwo from "../Pages/Hero/AttractionHomePageTwo";
 
@@ -23,7 +24,8 @@ const ThemeRoutes = [
             { path: "/home", element: <AttractionHomePageTwo /> },
             { path: "/attraction", element: <AttractionLandingPage /> },
             { path: "/details", element: <AttractionDetailsPage /> },
-            { path: "/combo", element: <ComboLandingPage /> }
+            { path: "/combo", element: <ComboLandingPage /> },
+            { path: "/specialoffer", element: <SpecialOfferLandingPage /> },
         ]
     },
 ]

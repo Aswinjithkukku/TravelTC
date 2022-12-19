@@ -10,7 +10,7 @@ export default function MainLayout() {
             <Navbar />
             <Outlet />
             <Footer />
-            <div className='fixed right-5 bottom-5 md:right-10 md:bottom-10 '>
+            <div className='fixed right-7 bottom-10 md:right-10 md:bottom-10 '>
                 <div className={` absolute right-0 transition-all duration-1000 h-14 w-14 rounded-full flex justify-center items-center text-3xl text-light bg-lightblue hover:blue ${viewIcons ? "bottom-60" : "bottom-0"} `}><a href="mailto:aswinjitht5@gmail.com"><AiOutlineMail /></a></div>
                 <div className={`absolute right-0 transition-all duration-1000 h-14 w-14 rounded-full flex justify-center items-center text-3xl text-light bg-darktext hover:blue   ${viewIcons ? "bottom-40" : "bottom-0"}`}> <a href="tel:+919846000000"><AiOutlinePhone /></a></div>
                 <div className={`absolute right-0   transition-all duration-1000 h-14 w-14 rounded-full flex justify-center items-center text-3xl text-light bg-green-500 hover:blue  ${viewIcons ? "bottom-20" : "bottom-0"} `}><a href="https://wa.me/+919100000000"><AiOutlineWhatsApp /></a></div>

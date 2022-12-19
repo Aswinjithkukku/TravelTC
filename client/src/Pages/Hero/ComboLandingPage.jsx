@@ -1,6 +1,7 @@
 import React from 'react'
 import Navigator from '../../components/Layouts/Navigator'
 import ComboListViewSection from '../ComboLanding/ComboListViewSection'
+import ConmboFunctionalitySection from '../ComboLanding/ConmboFunctionalitySection'
 
 function ComboLandingPage() {
   return (
@@ -16,7 +17,7 @@ function ComboLandingPage() {
           <ComboListViewSection />
         </span>
         <span className='lg:col-span-3'>
-          {/* <ListResultView id={id} /> */}
+          <ConmboFunctionalitySection />
         </span>
       </div>
       

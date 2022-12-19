@@ -7,7 +7,7 @@ function NearbySection() {
       <div className='text-3xl font-semibold text-dark mb-4'>Nearby destinations</div>
       <div className='md:grid md:grid-cols-3 gap-5'>
       {NearbyDestinations?.map((image,index) => (
-      <div className='mt-2 relative' key={index}>
+      <div className='mt-2 relative cursor-pointer' key={index}>
         <div className='overflow-hidden rounded-2xl'>
         <img className='hover:scale-110 object-cover rounded-2xl h-[14em] w-full  transition-all duration-500 cursor-pointer' src={image.img} alt={image.name} />
         </div>

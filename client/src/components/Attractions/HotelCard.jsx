@@ -15,7 +15,7 @@ function HotelCard() {
                         <span className='text-lg '>Departure</span>
                     </div>
                     <div className=''>
-                        <input type='text' placeholder='Where do you want to go?' className='w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
+                        <input type='text' placeholder='Where do you want to go?' className='px-3 w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@ function HotelCard() {
                         <span className='text-lg'>Leave</span>
                     </div>
                     <div className=''>
-                        <input type='date' placeholder='Choose date' className='w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
+                        <input type='date' placeholder='Choose date' className='px-3 w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
                     </div>
                 </div>
             </div>
@@ -37,7 +37,7 @@ function HotelCard() {
                         <span className='text-lg'>Return</span>
                     </div>
                     <div className=''>
-                        <input type='date' placeholder='Choose date' className='w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
+                        <input type='date' placeholder='Choose date' className='px-3 w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@ function HotelCard() {
                         <span className='text-lg'>People and Room</span>
                     </div>
                     <div className='' onClick={() => setDropdown(!dropdown)}>
-                        <input type='date' placeholder='Choose date' className='w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
+                        <input type='date' placeholder='Choose date' className='px-3 w-full border-none placeholder:text-text py-3 focus:outline-none focus:border-blue focus:ring-1 focus:ring-blue rounded-xl text-darktext' />
                     </div>
                     {/* absolute div */}
                     {dropdown && (

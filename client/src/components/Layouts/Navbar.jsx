@@ -19,6 +19,7 @@ function Navbar() {
   const [viewlogin, setViewlogin] = useState(false)
   const [viewCurrency, setViewCurrency] = useState(false)
   const [viewLanguage, setViewLanguage] = useState(false)
+  const [viewHelpline, setViewHelpline] = useState(false)
 
   return (
     <>
@@ -81,73 +82,91 @@ function Navbar() {
 
         </div>
       )}
-      <div className='hidden md:block bg-[#002366]'>
+      <div className='block bg-[#002366]'>
         <div className='lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between py-2'>
-            <span className='flex text-sm'>
-              <div className='flex items-center text-soft space-x-5 border-r px-5'>
-                <span className=''>
+            <span className='flex text-sm relative'>
+              <div className='flex items-center text-soft space-x-2 md:space-x-5 border-r  px-3 md:px-5'>
+                <span className='text-sm'>
                   <FaFacebookF />
                 </span>
-                <span className='text-lg'>
+                <span className=' lg:text-lg'>
                   <FaInstagram />
                 </span>
-                <span className='text-xl'>
+                <span className='text-lg lg:text-xl'>
                   <FaGooglePlusG />
                 </span>
               </div>
-              <div className='text-soft px-3'> +919822550000</div>
+              <div className='text-soft flex space-x-1 items-center px-3 text-xs lg:text-sm whitespace-nowrap'> 
+              <span className='text-xs'>
+                    Help line
+                  </span>
+                  <span className='text-sm' onClick={() => setViewHelpline(!viewHelpline)}>
+                    {viewHelpline ? <AiOutlineUp /> : <AiOutlineDown />}
+                  </span></div>
+              {/* absolute div */}
+              {viewHelpline && (
+              <div className='absolute top-7 left-0 bg-[#002366]'>
+                      <div className='mx-7 space-y-3 py-2'>
+                        <div className='text-soft'>
+                          +919836000000
+                        </div>
+                      </div>
+                    </div>
+                    )}
+              {/* absolute div */}
             </span>
             <span className='flex text-sm'>
-              <div className='flex px-5 space-x-5 text-soft items-center font-light'>
-                <div className='cursor-pointer'>B2B Login</div>
+              <div className='flex px-5 space-x-2 md:space-x-5 text-soft items-center font-light'>
+                <div className='cursor-pointer whitespace-nowrap text-xs lg:text-sm'>
+                  <a href='https://app.mytcb2b.com/#/login'>B2B Login</a></div>
                 <div className='flex space-x-1 items-center cursor-pointer relative' >
-                  <span className=''>
+                  <span className='text-xs'>
                     AED
                   </span>
-                  <span className=''onClick={() => setViewCurrency(!viewCurrency)}>
+                  <span className='text-sm' onClick={() => setViewCurrency(!viewCurrency)}>
                     {viewCurrency ? <AiOutlineUp /> : <AiOutlineDown />}
                   </span>
                   {/* absolute modal */}
                   {viewCurrency && (
-                  <div className='absolute top-7 -left-8 bg-[#002366]'>
-                    <div className='mx-7 space-y-3 py-2'>
-                      <div className=''>
-                        Euro
-                      </div>
-                      <div className=''>
-                        Rupees
-                      </div>
-                      <div className=''>
-                        Dollar
+                    <div className='absolute top-7 -left-8 bg-[#002366]'>
+                      <div className='mx-7 space-y-3 py-2'>
+                        <div className=''>
+                          EUR
+                        </div>
+                        <div className=''>
+                          INR
+                        </div>
+                        <div className=''>
+                          USD
+                        </div>
                       </div>
                     </div>
-                  </div>
                   )}
                   {/* absolute modal */}
                 </div>
                 <div className='flex space-x-2 items-center cursor-pointer'>
-                  <span className=''>
+                  <span className='text-xs'>
                     English
                   </span>
-                  <span className=''onClick={() => setViewLanguage(!viewLanguage)}>
-                    {viewLanguage ? <AiOutlineUp /> : <AiOutlineDown /> }  
+                  <span className='text-sm' onClick={() => setViewLanguage(!viewLanguage)}>
+                    {viewLanguage ? <AiOutlineUp /> : <AiOutlineDown />}
                   </span>
                   {/* absolute modal */}
                   {viewLanguage && (
-                  <div className='absolute top-7  bg-[#002366]'>
-                    <div className='mx-7 space-y-3 py-2'>
-                      <div className=''>
-                        Arab
-                      </div>
-                      <div className=''>
-                        French
-                      </div>
-                      <div className=''>
-                        Hindi
+                    <div className='absolute top-7 right-0 lg:right-auto bg-[#002366]'>
+                      <div className='mx-7 space-y-3 py-2'>
+                        <div className=''>
+                          Arab
+                        </div>
+                        <div className=''>
+                          French
+                        </div>
+                        <div className=''>
+                          Hindi
+                        </div>
                       </div>
                     </div>
-                  </div>
                   )}
                   {/* absolute modal */}
                 </div>
@@ -175,27 +194,31 @@ function Navbar() {
         </div>
       </div>
       <>
-        <div className={`fixed top-0 bottom-0 left-0 right-0 card z-20 ${viewRegister ? "scale-100" : "scale-0"}  duration-200 ease-in transition-all `} >
-          <div className={`absolute right-20  top-16 flex justify-center items-center bg-trans text-darktext h-16 w-16 rounded-full text-4xl`} onClick={() => setViewRegister(!viewRegister)}>
-            <AiOutlineClose />
+        {viewRegister && (
+          <div className={`fixed top-0 bottom-0 left-0 right-0 card z-20  duration-200 ease-in transition-all `} >
+            <div className={`absolute right-20  top-16 flex justify-center items-center bg-trans text-darktext h-16 w-16 rounded-full text-4xl`} onClick={() => setViewRegister(!viewRegister)}>
+              <AiOutlineClose />
+            </div>
+            <Register
+              setViewRegister={setViewRegister}
+              setViewlogin={setViewlogin}
+              viewRegister={viewRegister}
+              viewlogin={viewlogin}
+            />
           </div>
-          <Register
-            setViewRegister={setViewRegister}
-            setViewlogin={setViewlogin}
-            viewRegister={viewRegister}
-            viewlogin={viewlogin}
-          />
-        </div>
-        <div className={`fixed top-0 bottom-0 left-0 right-0 card z-20 ${viewlogin ? "scale-100" : "scale-0"}  duration-200 ease-in transition-all `} >
-          <div className={`absolute right-20  top-16 flex justify-center items-center bg-trans text-darktext h-16 w-16 rounded-full text-4xl`} onClick={() => setViewlogin(!viewlogin)}>
-            <AiOutlineClose />
+        )}
+        {viewlogin && (
+          <div className={`fixed top-0 bottom-0 left-0 right-0 card z-20  duration-200 ease-in transition-all `} >
+            <div className={`absolute right-20  top-16 flex justify-center items-center bg-trans text-darktext h-16 w-16 rounded-full text-4xl`} onClick={() => setViewlogin(!viewlogin)}>
+              <AiOutlineClose />
+            </div>
+            <Login
+              setViewRegister={setViewRegister}
+              setViewlogin={setViewlogin}
+              viewRegister={viewRegister}
+              viewlogin={viewlogin} />
           </div>
-          <Login
-            setViewRegister={setViewRegister}
-            setViewlogin={setViewlogin}
-            viewRegister={viewRegister}
-            viewlogin={viewlogin} />
-        </div>
+        )}
       </>
     </>
   )

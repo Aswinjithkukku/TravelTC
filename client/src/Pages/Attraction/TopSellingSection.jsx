@@ -6,7 +6,7 @@ function TopSellingSection() {
   return (
 <div className='mx-5 my-10 lg:mx-auto lg:max-w-screen-xl'>
       <div className='flex justify-between'>
-      <div className='text-3xl font-semibold text-darktext4'>Top Selling Packages</div>
+      <div className='text-3xl font-semibold text-darktext cursor-default '>Top Selling Packages</div>
       <div className='hidden lg:flex space-x-5'>
         <button className='hover:bg-main rounded-full w-12 h-12 flex justify-center items-center hover:text-light text-xl bg-light text-main duration-500'onClick={() => {
           document.querySelector('.containertop').scrollLeft -= 200
@@ -18,7 +18,7 @@ function TopSellingSection() {
       </div>
       <div className='containertop scroll-smooth flex overflow-x-auto snap-x overflow-y-hidden  gap-5'>
         {NearbyDestinations?.map((image, index) => (
-          <div className=' snap-start mt-2 bg-light p-3 rounded-3xl'>
+          <div className=' snap-start mt-2 bg-light p-3 rounded-3xl cursor-pointer'>
             <div className=' relative w-[17.5em]'>
               <div className='overflow-hidden rounded-t-3xl rounded-b-md'>
                 <img className='hover:scale-110 object-cover  h-[14em] w-full transition-all duration-500 cursor-pointer' src={image.img} alt={image.name} />

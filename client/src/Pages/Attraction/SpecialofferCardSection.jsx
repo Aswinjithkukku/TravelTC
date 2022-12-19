@@ -10,7 +10,7 @@ function SpecialofferCardSection() {
                 <div className='1 col-span-6'>
 
 
-                    <div className='  h-[23em] group '>
+                    <div className='  h-[23em] group cursor-pointer'>
                         <div className=' relative '>
                             <div className='overflow-hidden lg:rounded-xl bg-bottom'>
                                 <img className='group-hover:scale-110 object-cover  h-[23em] w-full transition-all duration-500 cursor-pointer' src={specialoffer} alt='special offer' />
@@ -38,7 +38,7 @@ function SpecialofferCardSection() {
                     </div>
                 </div>
                 <div className='2 hidden lg:block col-span-3'>
-                    <div className=' h-[23em] group mx-3'>
+                    <div className=' h-[23em] group mx-3 cursor-pointer'>
                         <div className='relative'>
                             <div className='overflow-hidden rounded-xl'>
                                 <img className='group-hover:scale-110 object-cover  h-[23em] w-full transition-all duration-500 cursor-pointer' src={combo} alt='combo' />
@@ -67,7 +67,7 @@ function SpecialofferCardSection() {
                     </div>
                 </div>
                 <div className='3 hidden lg:block col-span-3'>
-                    <div className=' h-[23em] group mx-3'>
+                    <div className=' h-[23em] group mx-3 cursor-pointer'>
                         <div className='relative'>
                             <div className='overflow-hidden rounded-xl'>
                                 <img className='group-hover:scale-110 object-cover  h-[23em] w-full transition-all duration-500 cursor-pointer' src={combo} alt='combo' />

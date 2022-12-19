@@ -13,8 +13,8 @@ function Login({setViewRegister, setViewlogin, viewlogin, viewRegister }) {
           {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className='absolute -bottom-14'>
             <path fill="#ffffff" fill-opacity="1" d="M0,64L120,85.3C240,107,480,149,720,160C960,171,1200,149,1320,138.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
           </svg> */}
-          <div className=' bglogindubai h-[100%]  bg-right rounded-2xl flex justify-start items-center pl-6 '>
-            <div className='w-4/12 loginCard shadow-md  rounded-2xl'>
+          <div className=' bglogindubai h-[100%]   bg-right rounded-2xl flex justify-start items-center pl-6 '>
+            <div className='w-[24em] loginCard h-[40em] shadow-md  rounded-2xl'>
               <div className='p-5 space-y-3'>
                 <div className='text-4xl text-main font-semibold'>Welcome Back...</div>
                 

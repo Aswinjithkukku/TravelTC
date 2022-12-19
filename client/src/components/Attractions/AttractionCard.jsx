@@ -5,7 +5,7 @@ import { IoLocationOutline } from 'react-icons/io5'
 
 function AttractionCard() {
     return (
-        <div className='lg:grid lg:grid-cols-12 gap-0 py-7'>
+        <div className='md:grid md:grid-cols-12 gap-0 py-7 space-y-4 md:space-y-0'>
             <div className='md:col-span-5 flex justify-center items-center md:border-r-2 border-bluetrans'>
                 <div className='space-y-2 w-10/12 '>
                     <div className='flex items-center space-x-2 text-darktext'>
@@ -30,7 +30,7 @@ function AttractionCard() {
             </div>
             <div className='md:col-span-2 flex justify-center items-center'>
                 <div className=''>
-                    <button className='h-14 w-14 bg-blue rounded-full text-light text-3xl flex justify-center items-center'>
+                    <button className='h-14 w-14 bg-blue rounded-xl text-light text-3xl flex justify-center items-center'>
                         <AiOutlineSearch />
                     </button>
                 </div>

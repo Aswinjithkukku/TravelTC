@@ -85,8 +85,8 @@ function FunctionalitySection() {
                 </div>
             </div>
             {/* sort options */}
-            <div className={`fixed  bg-blue w-full  text-textblue py-5 rounded-t-2xl transition-all duration-700 z-20  ${displayModal ? 'bottom-0' : "-bottom-full"} `}>
-                <div className='mx-5 space-y-3'>
+            <div className={`fixed  bg-light w-full  text-textblue py-5 rounded-t-2xl transition-all duration-700 z-20  ${displayModal ? 'bottom-0' : "-bottom-full"} `}>
+                <div className='mx-5 space-y-3 text-darktext'>
                     <div className=' flex justify-between items-center '>
                         <span className='text-2xl font-semibold'> Sort</span>
                         <span className='text-3xl' onClick={() => setDisplayModal(!displayModal)}><AiOutlineClose /> </span>
@@ -108,7 +108,7 @@ function FunctionalitySection() {
                 </div>
             </div>
             {/* sort overlay */}
-            <div className={`overlay fixed z-10 top-0 left-0 right-0 bottom-0 bg-lightblue opacity-50  ${displayModal ? 'block' : 'hidden'}`} onClick={() => setDisplayModal(!displayModal)}>
+            <div className={`overlay fixed z-10 top-0 left-0 right-0 bottom-0 bg-bluetrans opacity-50  ${displayModal ? 'block' : 'hidden'}`} onClick={() => setDisplayModal(!displayModal)}>
             </div>
 
             {/* filter options */}

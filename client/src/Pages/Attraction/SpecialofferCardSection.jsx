@@ -2,6 +2,7 @@ import React from 'react'
 import { GiIsland, GiHoneycomb } from 'react-icons/gi'
 import specialoffer from '../../static/images/specialoffer2.jpg'
 import combo from '../../static/images/combo.jpg'
+import { Link } from 'react-router-dom'
 
 function SpecialofferCardSection() {
     return (
@@ -43,25 +44,27 @@ function SpecialofferCardSection() {
                             <div className='overflow-hidden rounded-xl'>
                                 <img className='group-hover:scale-110 object-cover  h-[23em] w-full transition-all duration-500 cursor-pointer' src={combo} alt='combo' />
                             </div>
-                        <div className='absolute h-full w-full top-0 bg-cardtransblue rounded-xl'>
-                        <div className=' px-10 py-10'>
-                                <div className=' pt-5'>
-                                    <span className='text-5xl text-light'>
-                                        <GiHoneycomb />
-                                    </span>
-                                </div>
-                                <div className='text-3xl text-light font-medium  heading pt-5'>
-                                    Combo Packs
-                                </div>
-                                <div className='text-sm text-light pt-3'>
-                                    <p className=''>Find Your Perfect combo packages Get the best<br />
-                                        prices and properties</p>
-                                </div>
-                                <div className='pt-3 mt-20 scale-0 group-hover:scale-100 group-hover:mt-0 transition-all duration-700'>
-                                    <button className='py-2 px-3 text-sm border-light border text-light hover:bg-light hover:text-darktext '>See Deals</button>
+                            <div className='absolute h-full w-full top-0 bg-cardtransblue rounded-xl'>
+                                <div className=' px-10 py-10'>
+                                    <div className=' pt-5'>
+                                        <span className='text-5xl text-light'>
+                                            <GiHoneycomb />
+                                        </span>
+                                    </div>
+                                    <div className='text-3xl text-light font-medium  heading pt-5'>
+                                        Combo Packs
+                                    </div>
+                                    <div className='text-sm text-light pt-3'>
+                                        <p className=''>Find Your Perfect combo packages Get the best<br />
+                                            prices and properties</p>
+                                    </div>
+                                    <div className='pt-3 mt-20 scale-0 group-hover:scale-100 group-hover:mt-0 transition-all duration-700'>
+                                        <Link to='/combo'>
+                                            <button className='py-2 px-3 text-sm border-light border text-light hover:bg-light hover:text-darktext '>See Deals</button>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
                     </div>
@@ -72,25 +75,28 @@ function SpecialofferCardSection() {
                             <div className='overflow-hidden rounded-xl'>
                                 <img className='group-hover:scale-110 object-cover  h-[23em] w-full transition-all duration-500 cursor-pointer' src={combo} alt='combo' />
                             </div>
-                        <div className='absolute h-full w-full top-0 bg-cardtransyellow rounded-xl'>
-                        <div className=' px-10 py-10'>
-                                <div className=' pt-5'>
-                                    <span className='text-5xl text-light'>
-                                        <GiIsland />
-                                    </span>
-                                </div>
-                                <div className='text-3xl text-light font-medium  heading pt-5'>
-                                    Attractions
-                                </div>
-                                <div className='text-sm text-light pt-3'>
-                                    <p className=''>Find Your Perfect Attractions Get the best<br />
-                                        prices and properties</p>
-                                </div>
-                                <div className='pt-3 mt-20 scale-0 group-hover:scale-100 group-hover:mt-0 transition-all duration-700'>
-                                    <button className='py-2 px-3 text-sm border-light border text-light hover:bg-light hover:text-darktext '>See Deals</button>
+                            <div className='absolute h-full w-full top-0 bg-cardtransyellow rounded-xl'>
+                                <div className=' px-10 py-10'>
+                                    <div className=' pt-5'>
+                                        <span className='text-5xl text-light'>
+                                            <GiIsland />
+                                        </span>
+                                    </div>
+                                    <div className='text-3xl text-light font-medium  heading pt-5'>
+                                        Attractions
+                                    </div>
+                                    <div className='text-sm text-light pt-3'>
+                                        <p className=''>Find Your Perfect Attractions Get the best<br />
+                                            prices and properties</p>
+                                    </div>
+                                    <div className='pt-3 mt-20 scale-0 group-hover:scale-100 group-hover:mt-0 transition-all duration-700'>
+
+                                        <Link to='/attraction'>
+                                            <button className='py-2 px-3 text-sm border-light border text-light hover:bg-light hover:text-darktext '>See Deals</button>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
                         </div>
                     </div>

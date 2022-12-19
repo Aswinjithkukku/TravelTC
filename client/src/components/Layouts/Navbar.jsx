@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <>
-      {viewMenu && (
+      {/* {viewMenu && (
         <div className='fixed h-screen bg-light w-screen z-50'>
           <div className='flex justify-end text-2xl m-5' onClick={() => setViewMenu(!viewMenu)} ><GrClose /> </div>
 
@@ -81,7 +81,7 @@ function Navbar() {
           </div>
 
         </div>
-      )}
+      )} */}
       <div className='block bg-[#002366]'>
         <div className='lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between py-2'>
@@ -106,10 +106,10 @@ function Navbar() {
                   </span></div>
               {/* absolute div */}
               {viewHelpline && (
-              <div className='absolute top-7 left-0 bg-[#002366]'>
+              <div className='absolute top-7 md:top-8 left-14 md:left-24 bg-[#002366]'>
                       <div className='mx-7 space-y-3 py-2'>
-                        <div className='text-soft'>
-                          +919836000000
+                        <div className='text-soft '>
+                        <a href="tel:+919846000000">+919846000000</a>
                         </div>
                       </div>
                     </div>
@@ -129,7 +129,7 @@ function Navbar() {
                   </span>
                   {/* absolute modal */}
                   {viewCurrency && (
-                    <div className='absolute top-7 -left-8 bg-[#002366]'>
+                    <div className='absolute z-20 top-7 md:top-8 -left-8 bg-[#002366]'>
                       <div className='mx-7 space-y-3 py-2'>
                         <div className=''>
                           EUR
@@ -154,7 +154,7 @@ function Navbar() {
                   </span>
                   {/* absolute modal */}
                   {viewLanguage && (
-                    <div className='absolute top-7 right-0 lg:right-auto bg-[#002366]'>
+                    <div className='absolute top-9 md:top-10 z-20 right-0 lg:right-auto bg-[#002366]'>
                       <div className='mx-7 space-y-3 py-2'>
                         <div className=''>
                           Arab
@@ -184,11 +184,13 @@ function Navbar() {
               </div>
             </Link>
             <div className='flex space-x-5'>
-              <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span>
-              <span className='lg:hidden flex items-center text-stone-600 text-2xl' onClick={() => setViewMenu(!viewMenu)}><AiOutlineMenu /></span>
+              {/* <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span> */}
+              {/* <span className='lg:hidden flex items-center text-stone-600 text-2xl' onClick={() => setViewMenu(!viewMenu)}><AiOutlineMenu /></span> */}
               {/* <span className='hidden lg:flex items-center text-stone-600 text-2xl'><AiOutlineQuestionCircle /> </span> */}
-              <span className='hidden lg:flex items-center text-light text-sm bg-main px-3  my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewRegister(!viewRegister)}>Register </span>
-              <span className='hidden lg:flex items-center text-light text-sm bg-blue px-3  my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewlogin(!viewlogin)}>Sign in</span>
+              <span className='hidden lg:flex items-center text-light text-xs lg:text-sm bg-main px-2 lg:px-3  lg:my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewRegister(!viewRegister)}>Register </span>
+              <span className='hidden lg:flex items-center text-light text-xs lg:text-sm bg-blue px-2 lg:px-3  lg:my-3 rounded-lg shadow-sm cursor-pointer' onClick={() => setViewlogin(!viewlogin)}>Sign in</span>
+              <span className='lg:hidden flex items-center text-light text-xs lg:text-sm bg-main px-2 lg:px-3  lg:my-3 rounded-lg shadow-sm cursor-pointer' >Register </span>
+              <span className='lg:hidden flex items-center text-light text-xs lg:text-sm bg-blue px-2 lg:px-3  lg:my-3 rounded-lg shadow-sm cursor-pointer' >Sign in</span>
             </div>
           </div>
         </div>

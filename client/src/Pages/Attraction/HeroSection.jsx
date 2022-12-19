@@ -9,10 +9,7 @@ import dubai from "../../static/images/dubai.jpg"
 import uae from "../../static/images/uae.jpg"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import AttractionCard from '../../components/Attractions/AttractionCard'
-import FlightCard from '../../components/Attractions/FlightCard'
-import HotelCard from '../../components/Attractions/HotelCard'
-import CarCard from '../../components/Attractions/CarCard'
+import { AttractionCard,FlightCard,HotelCard,CarCard,VisaCard } from '../../components/Attractions'
 import { IoLocationOutline } from 'react-icons/io5'
 
 function HeroSection() {
@@ -43,7 +40,7 @@ function HeroSection() {
                                 <div className='text-3xl lg:text-6xl font-bold text-light heading pt-20'>Discover Beautiful Places</div>
                                 <div className='text-light md:text-lg '>Discover this emirate and its dazzling treasures</div>
                                 {/* <div className='hidden md:block text-light bg-trans text-2xl mt-24 py-10'>Explore Your Destination </div> */}
-                                <div className='flex items-end h-[51vh] '>
+                                <div className='flex items-end h-[30em] '>
                                     <div className='hidden md:flex justify-between w-full items-center mx-10 max-w-8xl'>
                                         <span className='text-3xl font-bold text-darktext bg-trans hover:bg-soft h-16 w-16 rounded-full flex justify-center items-center' onClick={() => setCurrentSlide(currentSlide - 1)}><AiOutlineLeft /> </span>
                                         <span className='text-3xl text-light font-lg space-x-1 flex '><IoLocationOutline /> Dubai</span>
@@ -124,7 +121,7 @@ function HeroSection() {
                                             await setViewCar(true)
                                         }}>
                                             <span className=''><IoIosCar /> </span>
-                                            <span className=''>Car</span>
+                                            <span className=''>Transport</span>
                                         </button>
                                     </div>
                                 </div>
@@ -140,6 +137,9 @@ function HeroSection() {
                                             )}
                                             {viewHotel && (
                                                 <HotelCard />
+                                            )}
+                                            {viewVisa && (
+                                                <VisaCard />
                                             )}
                                             {viewCar && (
                                                 <CarCard />

@@ -19,7 +19,7 @@ function Register({ setViewRegister, setViewlogin, viewlogin, viewRegister }) {
                   <div className='text-sm text-text'>when an unknown printer took a galley of type and scrambled </div>
                 </div>
               </div>
-              <div className='w-4/12 loginCard shadow-md  rounded-2xl'>
+              <div className='w-[24em] h-[40em] loginCard shadow-md  rounded-2xl'>
                 <div className='p-5 space-y-3'>
                   <div className='text-4xl text-blue font-semibold'>Greetings...</div>
                   <div className='space-y-2'>

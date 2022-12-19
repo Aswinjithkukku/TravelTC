@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ActivityAndTourSection from '../Attraction/ActivityAndToursSection'
 import AttractionsAndLandmarkSection from '../Attraction/AttractionsAndLandmarkSection'
 import BlogSection from '../Attraction/BlogSection'
@@ -10,6 +10,8 @@ import TopSellingSection from '../Attraction/TopSellingSection'
 import SpecialofferCardSection from '../Attraction/SpecialofferCardSection'
 // import AttractionCardSection from '../Attraction/AttractionCardSection'
 import SubscribeSection from '../Attraction/SubscribeSection'
+import { AiOutlineMail, AiOutlinePhone, AiOutlinePlus, AiOutlineWhatsApp } from 'react-icons/ai'
+
 
 function AttractionHomePage() {
   return (

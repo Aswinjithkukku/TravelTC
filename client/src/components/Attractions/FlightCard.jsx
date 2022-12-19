@@ -40,11 +40,11 @@ function FlightCard() {
             </div>
             {/* absolute div */}
             {dropdown && (
-                <div className="absolute glass border-2 right-0 top-[25px] rounded-2xl w-[15em] z-10 shadow-sm">
+                <div className="absolute bg-soft border-2 right-0 top-[25px] rounded-2xl w-[15em] z-10 shadow-sm">
                     <ul>
                         <li>
                             <div
-                                className="flex items-center gap-[12px] text-sm px-6 py-[12px]  transition-all text-text hover:text-darktext justify-between"
+                                className="flex items-center gap-[12px] text-sm px-6 py-[12px]  transition-all text-darktext justify-between"
                             >
                                 <span>Adults</span>
                                 <span>
@@ -54,7 +54,7 @@ function FlightCard() {
                         </li>
                         <li>
                             <div
-                                className="flex items-center gap-[12px] text-sm px-6 py-[12px] transition-all text-text hover:text-darktext justify-between"
+                                className="flex items-center gap-[12px] text-sm px-6 py-[12px] transition-all text-darktext justify-between"
                             >
                                 <span>Seniors</span>
                                 <span>
@@ -64,7 +64,7 @@ function FlightCard() {
                         </li>
                         <li>
                             <div
-                                className="flex items-center gap-[12px] text-sm px-6 py-[12px] transition-all text-text hover:text-darktext justify-between"
+                                className="flex items-center gap-[12px] text-sm px-6 py-[12px] transition-all text-darktext justify-between"
                             >
                                 <span>Children</span>
                                 <span>
@@ -78,7 +78,7 @@ function FlightCard() {
             {/* absolute div */}
         </div>
     </div>
-    <div className='lg:grid lg:grid-cols-12 gap-0 pb-7'>
+    <div className='md:grid md:grid-cols-12 gap-0 pb-7 space-y-4 md:space-y-0'>
         <div className='md:col-span-3 flex justify-center items-center md:border-r-2 border-bluetrans'>
             <div className='space-y-2 w-10/12 '>
                 <div className='flex items-center space-x-2 text-darktext'>
@@ -125,7 +125,7 @@ function FlightCard() {
         </div>
         <div className='md:col-span-2 flex justify-center items-center'>
             <div className=''>
-                <button className='h-14 w-14 bg-blue rounded-full text-light text-3xl flex justify-center items-center'>
+                <button className='h-14 w-14 bg-blue rounded-xl text-light text-3xl flex justify-center items-center'>
                     <AiOutlineSearch />
                 </button>
             </div>

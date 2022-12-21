@@ -6,10 +6,10 @@ import { TiTick } from 'react-icons/ti'
 function SearchListViewSection() {
     return (
         <div>
-            <div className='grid grid-cols-2 gap-5'>
+            <div className='md:grid md:grid-cols-2 gap-5'>
                 {NearbyDestinations?.map((image, index) => (
                     <div className='' key={index}>
-                        <div className=' snap-start mt-2 bg-light shadow-md p-3 rounded-3xl cursor-pointer'>
+                        <div className=' snap-start mt-2 bg-light shadow-md p-3 rounded-3xl cursor-pointer mx-2 md:mx-0'>
                             <div className=' relative space-y-3'>
                                 <div className='overflow-hidden rounded-2xl '>
                                     <img className='hover:scale-110 object-cover  h-[14em] w-full transition-all duration-500 cursor-pointer' src={image.img} alt={image.name} />

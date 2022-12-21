@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 // import { CgProfile } from 'react-icons/cg'
 import { AiOutlineClose, AiOutlineDown, AiOutlineRight, AiOutlineUp } from 'react-icons/ai'
 // import { CgSmartphone } from "react-icons/cg";
@@ -14,6 +14,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { BsFacebook } from 'react-icons/bs';
 import RegisterMobileCard from '../Authentication/RegisterMobileCard';
 import LoginMobileCard from '../Authentication/LoginMobileCard';
+import axios from '../../axios'
 
 
 function Navbar() {
@@ -26,6 +27,15 @@ function Navbar() {
   const [viewCurrency, setViewCurrency] = useState(false)
   const [viewLanguage, setViewLanguage] = useState(false)
   const [viewHelpline, setViewHelpline] = useState(false)
+
+  useEffect(() => {
+    getLogo()
+  },[])
+
+  const getLogo = async () => {
+    const { data } = await axios.get('/tour/exe')
+    console.log(data);
+  }
 
   return (
     <>

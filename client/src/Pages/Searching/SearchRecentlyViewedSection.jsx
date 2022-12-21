@@ -3,8 +3,8 @@ import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 
 function SearchRecentlyViewedSection() {
   return (
-    <div className='py-10'>
-      <div className='space-y-2'>    
+    <div className='py-10 '>
+      <div className='space-y-2 mx-3 lg:mx-0'>    
         <div className='flex justify-between'>
       <div className='text-3xl font-semibold text-darktext mb-4 cursor-default'>Recently Viewed</div>
       <div className='hidden  lg:flex space-x-5'>
@@ -16,7 +16,7 @@ function SearchRecentlyViewedSection() {
         }}><AiOutlineRight/> </button>
       </div>
       </div>
-        <p className='text-text text-lg'>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical</p>
+        <p className='text-text md:text-lg '>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical</p>
       </div>
       <div className='py-7'>
         <div className='containerRV scroll-smooth snap-x flex gap-5 overflow-x-auto'>

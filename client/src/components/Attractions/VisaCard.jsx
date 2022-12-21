@@ -2,6 +2,7 @@ import React from 'react'
 import { AiOutlineSearch } from 'react-icons/ai'
 import { BsCalendar2Date } from 'react-icons/bs'
 import { IoLocationOutline } from 'react-icons/io5'
+import { Link } from 'react-router-dom'
 
 function VisaCard() {
   return (
@@ -30,9 +31,11 @@ function VisaCard() {
     </div>
     <div className='md:col-span-2 flex justify-center items-center'>
         <div className=''>
+            <Link to='/visa'>
             <button className='h-14 w-14 bg-blue rounded-xl text-light text-3xl flex justify-center items-center'>
                 <AiOutlineSearch />
             </button>
+            </Link>
         </div>
     </div>
 </div>

@@ -1,8 +1,7 @@
 import React from 'react'
 
-function FaqSection() {
-  return (
-    <div>
+function VisaFAQsSection() {
+    return (
         <div className='py-5'>
             <div className='font-medium text-2xl text-darktext pb-5'>Dubai Visa FAQs</div>
             <div className='bg-light text-darktext font-light cursor-pointer rounded-2xl'>
@@ -12,9 +11,9 @@ function FaqSection() {
                         <span className=''>+</span>
                         <span className='text-lightblue'>Can I get Dubai Visa on Arrival?</span>
                     </div>
-                    <div className={`text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
+                    <div className={`text-sm text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
                         <div className='p-4'>
-                            <p className='leading-loose'>
+                            <p className=''>
                                 Yes, Citizens of few countries do not require advance visa arrangements to enter the UAE and can obtain a Dubai visa on arrival.
                                 Indian nationals holding a normal passport and a valid Visa, or a Green Card issued by the USA, or UK or EU Residency,
                                 can obtain a Dubai Tourist visa on arrival for a maximum stay of 14 days. The US Visa,
@@ -31,9 +30,9 @@ function FaqSection() {
                         <span className=''>+</span>
                         <span className='text-lightblue'>Can I get Dubai Visa on Arrival?</span>
                     </div>
-                    <div className={` text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
+                    <div className={`text-sm text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
                         <div className='p-4'>
-                            <p className='leading loose'>
+                            <p className=''>
                                 Yes, Citizens of few countries do not require advance visa arrangements to enter the UAE and can obtain a Dubai visa on arrival.
                                 Indian nationals holding a normal passport and a valid Visa, or a Green Card issued by the USA, or UK or EU Residency,
                                 can obtain a Dubai Tourist visa on arrival for a maximum stay of 14 days. The US Visa,
@@ -57,9 +56,9 @@ function FaqSection() {
                         <span className=''>+</span>
                         <span className='text-lightblue'>Can I get Dubai Visa on Arrival?</span>
                     </div>
-                    <div className={` text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
+                    <div className={`text-sm text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
                         <div className='p-4'>
-                            <p className='leading loose'>
+                            <p className=''>
                                 Yes, Citizens of few countries do not require advance visa arrangements to enter the UAE and can obtain a Dubai visa on arrival.
                                 Indian nationals holding a normal passport and a valid Visa, or a Green Card issued by the USA, or UK or EU Residency,
                                 can obtain a Dubai Tourist visa on arrival for a maximum stay of 14 days. The US Visa,
@@ -76,9 +75,9 @@ function FaqSection() {
                         <span className=''>+</span>
                         <span className='text-lightblue'>Can I get Dubai Visa on Arrival?</span>
                     </div>
-                    <div className={` text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
+                    <div className={`text-sm text-text font-light overflow-hidden  max-h-0 peer-checked:max-h-[100vh] transition-all duration-700 `}>
                         <div className='p-4'>
-                            <p className='leading loose'>
+                            <p className=''>
                                 Yes, Citizens of few countries do not require advance visa arrangements to enter the UAE and can obtain a Dubai visa on arrival.
                                 Indian nationals holding a normal passport and a valid Visa, or a Green Card issued by the USA, or UK or EU Residency,
                                 can obtain a Dubai Tourist visa on arrival for a maximum stay of 14 days. The US Visa,
@@ -91,8 +90,7 @@ function FaqSection() {
                 </div>
             </div>
         </div>
-</div>
-  )
+    )
 }
 
-export default FaqSection
+export default VisaFAQsSection

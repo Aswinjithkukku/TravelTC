@@ -1,9 +1,21 @@
 import AttractionLandingPage from "./AttractionLandingPage";
 import AttractionDetailsPage from "./AttractionDetailsPage";
-import AttractionHomePageTwo from './AttractionHomePageTwo.jsx';
 import AttractionHomePage from "./AttractionHomePage.jsx";
 import ComboLandingPage from "./ComboLandingPage";
 import SpecialOfferLandingPage from "./SpecialOfferLandingPage";
-import Demo from "./Demo";
+import VisaLandingPage from "./VisaLandingPage";
+import BlogLandingPage from "./BlogLandingPage";
+import BlogDetailsPage from "./BlogDetailsPage";
+import SearchingResultPage from "./SearchingResultPage";
 
-export {AttractionLandingPage,AttractionDetailsPage, Demo,AttractionHomePage,AttractionHomePageTwo,ComboLandingPage,SpecialOfferLandingPage}
+export {
+  AttractionLandingPage,
+  AttractionDetailsPage,
+  AttractionHomePage,
+  ComboLandingPage,
+  SpecialOfferLandingPage,
+  VisaLandingPage,
+  BlogLandingPage,
+  BlogDetailsPage,
+  SearchingResultPage,
+};

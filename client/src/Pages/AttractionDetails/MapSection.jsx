@@ -5,8 +5,8 @@ import { IoLocationOutline } from 'react-icons/io5'
 function MapSection() {
   return (
     <>
-        <div className='space-y-2'>
-            <div className=' font-medium text-lg'>
+        <div className='space-y-2 cursor-pointer'>
+            <div className=' font-medium text-lg text-lightblue'>
                 Burj Khalifa
             </div>
             <div className=' font-medium text-xs'>

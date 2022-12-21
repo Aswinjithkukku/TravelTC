@@ -1,16 +1,12 @@
-import React, { useState } from 'react'
-import ActivityAndTourSection from '../Attraction/ActivityAndToursSection'
-import AttractionsAndLandmarkSection from '../Attraction/AttractionsAndLandmarkSection'
-import BlogSection from '../Attraction/BlogSection'
-import HeroSection from '../Attraction/HeroSection'
-// import FeatureSection from '../Attraction/FeatureSection'
-// import InfoSection from '../Attraction/InfoSection'
-import NearbySection from '../Attraction/NearbySection'
-import TopSellingSection from '../Attraction/TopSellingSection'
-import SpecialofferCardSection from '../Attraction/SpecialofferCardSection'
-// import AttractionCardSection from '../Attraction/AttractionCardSection'
-import SubscribeSection from '../Attraction/SubscribeSection'
-import { AiOutlineMail, AiOutlinePhone, AiOutlinePlus, AiOutlineWhatsApp } from 'react-icons/ai'
+import React from 'react'
+import ActivityAndTourSection from '../General/ActivityAndToursSection'
+import AttractionsAndLandmarkSection from '../General/AttractionsAndLandmarkSection'
+import BlogSection from '../General/BlogSection'
+import HeroSection from '../General/HeroSection'
+import NearbySection from '../General/NearbySection'
+import TopSellingSection from '../General/TopSellingSection'
+import SpecialofferCardSection from '../General/SpecialofferCardSection'
+import SubscribeSection from '../General/SubscribeSection'
 
 
 function AttractionHomePage() {
@@ -18,12 +14,9 @@ function AttractionHomePage() {
     <div className='bg-soft md:space-y-20'>
       <HeroSection />
       <SpecialofferCardSection />
-      {/* <FeatureSection /> */}
       <ActivityAndTourSection />
       <AttractionsAndLandmarkSection />
       <TopSellingSection />
-      {/* <InfoSection /> */}
-      {/* <AttractionCardSection /> */}
       <BlogSection />
       <NearbySection />
       <SubscribeSection />

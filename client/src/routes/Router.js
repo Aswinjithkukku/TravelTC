@@ -1,17 +1,16 @@
 import MainLayout from "./MainLayout";
 
-// import AttractionHomePage from "../Pages/Hero/AttractionHomePage";
-// import AttractionLandingPage from "../Pages/Base/AttractionLandingPage";
-// import {BaseAttractionDetailsPage, BaseAttractionLandingPage, BaseDemo} from "../Pages/Base";
 import {
     AttractionHomePage,
     AttractionDetailsPage,
     AttractionLandingPage,
-    AttractionHomePageTwo,
     ComboLandingPage,
-    SpecialOfferLandingPage
+    SpecialOfferLandingPage,
+    VisaLandingPage,
+    BlogLandingPage,
+    BlogDetailsPage,
+    SearchingResultPage
 } from '../Pages/Hero'
-// import AttractionHomePageTwo from "../Pages/Hero/AttractionHomePageTwo";
 
 const ThemeRoutes = [
     {
@@ -21,11 +20,14 @@ const ThemeRoutes = [
         ),
         children: [
             { path: "", element: <AttractionHomePage /> },
-            { path: "/home", element: <AttractionHomePageTwo /> },
             { path: "/attraction", element: <AttractionLandingPage /> },
             { path: "/details", element: <AttractionDetailsPage /> },
             { path: "/combo", element: <ComboLandingPage /> },
             { path: "/specialoffer", element: <SpecialOfferLandingPage /> },
+            { path: "/visa", element: <VisaLandingPage /> },
+            { path: "/blog", element: <BlogLandingPage /> },
+            { path: "/blog/details", element: <BlogDetailsPage /> },
+            { path: "/search", element: <SearchingResultPage /> },
         ]
     },
 ]

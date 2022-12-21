@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import banner from '../../static/images/banner.jpg'
 
 function BlogSection() {
@@ -14,9 +15,11 @@ function BlogSection() {
                         <div className='text-darktext text-3xl font-medium cursor-default'>
                             Blog
                         </div>
-                        <div className='px-7 mr-2 hover:bg-soft hover:text-blue hover:border-blue hover:border bg-blue text-light shadow-sm py-2 rounded-md cursor-pointer'>View</div>
+                        <Link to='/blog'>
+                            <div className='px-7 mr-2 hover:bg-soft hover:text-blue hover:border-blue hover:border bg-blue text-light shadow-sm py-2 rounded-md cursor-pointer'>View</div>
+                        </Link>
                     </div>
-                    <div className=' gap-5 lg:grid grid-cols-3'>
+                    <div className=' gap-5 md:grid-cols-2 md:grid lg:grid-cols-3'>
                         <div className=' mt-2 bg-light p-3 rounded-3xl cursor-pointer'>
                             <div className=' relative'>
                                 <div className='overflow-hidden rounded-t-3xl rounded-b-md'>

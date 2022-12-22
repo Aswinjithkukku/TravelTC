@@ -4,10 +4,12 @@ import axios from '../../axios'
 const initialState = {
     loading: false,
     state: [],
-    logo: "",
-    banners: [],
+    logo: [],
+    sectionData: [],
+    banners: {},
     sections: [],
-    helplines:[]
+    helplines:[],
+    independentBlog: [],
 }
 
 export const getState = createAsyncThunk(
@@ -28,7 +30,7 @@ export const getLogo = createAsyncThunk(
         //         Authorization: `Bearer ${token}`,
         //       },
         // }
-        const response =  await axios.post(`/general/logo/${1}`)
+        const response =  await axios.get(`/general/logo?is_active=1`)
         return response.data;
     }
 )
@@ -37,8 +39,8 @@ export const getLogo = createAsyncThunk(
 export const getBanners = createAsyncThunk(
     "general/getBanners",
     async(args, {getState}) => {
-        const { data } = await axios.get('/general/landinpage')
-        console.log(data);
+        const { data } = await axios.get(`/general/landingpage/${1}`)
+        // console.log(data);
         return data
     }
 )
@@ -48,7 +50,16 @@ export const getSections = createAsyncThunk(
     "general/getSections",
     async(args, {getState}) => {
         const { data } = await axios.get('/general/sectionactivity')
-        console.log(data)
+        // console.log(data)
+        return data
+    }
+)
+// for mapping each sections data
+export const getSectionData = createAsyncThunk(
+    "general/getSectionData",
+    async(args, {getState}) => {
+        const { data } = await axios.get('/general/sectiontour')
+        // console.log(data)
         return data
     }
 )
@@ -58,6 +69,16 @@ export const getHelplines = createAsyncThunk(
     "general/getHelplines",
     async(args,{getState}) => {
         const { data } = await axios.get('/general/helpline')
+        console.log(data)
+        return data
+    }
+)
+
+// for helpline section
+export const getIndependentBlog = createAsyncThunk(
+    "general/getIndependentBlog",
+    async(args,{getState}) => {
+        const { data } = await axios.get('/general/blog')
         console.log(data)
         return data
     }
@@ -100,12 +121,28 @@ const generalSlice = createSlice({
             state.sections = action.payload
         },
 
+        [getSectionData.pending]: (state, action) => {
+            state.loading = true
+        },
+        [getSectionData.fulfilled]: (state, action) => {
+            state.loading = false
+            state.sectionData = action.payload
+        },
+
         [getHelplines.pending]: (state, action) => {
             state.loading = true
         },
         [getHelplines.fulfilled]: (state, action) => {
             state.loading = false
             state.helplines = action.payload
+        },
+
+        [getIndependentBlog.pending]: (state, action) => {
+            state.loading = true
+        },
+        [getIndependentBlog.fulfilled]: (state, action) => {
+            state.loading = false
+            state.independentBlog = action.payload
         },
 
     }

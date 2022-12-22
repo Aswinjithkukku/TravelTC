@@ -138,11 +138,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.attractions {
-  background-image: url("./static/images/attractions.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 .lightglass {
   background: rgba( 131, 117, 117, 0.2 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -150,4 +146,7 @@ body {
   -webkit-backdrop-filter: blur( 2px );
   /* border-radius: 10px; */
   border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.visabanner {
+  background-image: url("./static/images/visavisa.png");
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 function TermsConditionSection() {
     return (
-        <div className='py-10'>
+        <div className='py-10 mx-4 lg:mx-0'>
             <div className='text-2xl font-medium text-darktext py-3'>
                 <h1>
                     Dubai Visa Services - Terms & Conditions

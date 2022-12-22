@@ -1,25 +1,21 @@
 import React, { useEffect, useState } from 'react'
-// import { CgProfile } from 'react-icons/cg'
-import { AiOutlineClose, AiOutlineDown, AiOutlineRight, AiOutlineUp } from 'react-icons/ai'
-// import { CgSmartphone } from "react-icons/cg";
-// import { GrClose } from 'react-icons/gr'
-// import { MenuLinks } from '../../data'
-// import india from '../../static/images/india.png'
+import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
 import travellersChoice from '../../static/images/travellersChoice.png'
 import Register from '../Authentication/Register';
 import Login from '../Authentication/Login';
 import { FaFacebookF, FaGooglePlusG, FaInstagram } from 'react-icons/fa';
-import { FcGoogle } from 'react-icons/fc';
-import { BsFacebook } from 'react-icons/bs';
 import RegisterMobileCard from '../Authentication/RegisterMobileCard';
 import LoginMobileCard from '../Authentication/LoginMobileCard';
-import axios from '../../axios'
-
+// import axios from '../../axios'
+import { getLogo } from '../../redux/slices/generalSlice';
+import { useDispatch, useSelector } from 'react-redux'
 
 function Navbar() {
 
-  // const [viewMenu, setViewMenu] = useState(false)
+  const dispatch = useDispatch()
+  const { logo,helplines } = useSelector(state => state.general)
+
   const [viewRegister, setViewRegister] = useState(false)
   const [viewlogin, setViewlogin] = useState(false)
   const [viewRegisterMobile, setViewRegisterMobile] = useState(false)
@@ -29,14 +25,10 @@ function Navbar() {
   const [viewHelpline, setViewHelpline] = useState(false)
 
   useEffect(() => {
-    getLogo()
-  },[])
+    dispatch(getLogo())
+  }, [dispatch])
 
-  const getLogo = async () => {
-    const { data } = await axios.get('/tour/exe')
-    console.log(data);
-  }
-
+  console.log(logo);
   return (
     <>
       <div className='block bg-[#002366]'>
@@ -65,11 +57,16 @@ function Navbar() {
               {/* absolute div */}
               {viewHelpline && (
                 <div className='absolute top-7 md:top-8 left-14 md:left-24 bg-[#002366]'>
-                  <div className='mx-7 space-y-3 py-2'>
+                    {helplines?.map((num) => (
+                  <div className='mx-7 space-y-3 py-2' key={num.id}>
                     <div className='text-soft '>
-                      <a href="tel:+919846000000">+919846000000</a>
+                      <a href={`tel:+91${num.number_1}`}>+91{num.number_1}</a>
+                    </div>
+                    <div className='text-soft ' >
+                      <a href={`tel:+91${num.number_2}`}>+91{num.number_2}</a>
                     </div>
                   </div>
+                    ))}
                 </div>
               )}
               {/* absolute div */}
@@ -137,9 +134,14 @@ function Navbar() {
         <div className=' py-1 px-3 lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between'>
             <Link to='/'>
-              <div className=''>
-                <img className='h-8 md:h-14' src={travellersChoice} alt='travellersChoice' />
+              {logo?.map((item) => (
+              <div className='' key={item.id}>
+                <img className='h-8 md:h-14' src={item.img} alt={item.title} />
               </div>
+              ))}
+              {/* <div className=''>
+                <img className='h-8 md:h-14' src={travellersChoice} alt='tc' />
+              </div> */}
             </Link>
             <div className='flex space-x-5'>
               {/* <span className='lg:hidden flex items-center text-stone-600 text-2xl '><CgProfile /></span> */}
@@ -156,22 +158,22 @@ function Navbar() {
       <>
 
         <div>
-          <RegisterMobileCard 
-          viewRegisterMobile={viewRegisterMobile}
-          setViewRegisterMobile={setViewRegisterMobile}
-           />
+          <RegisterMobileCard
+            viewRegisterMobile={viewRegisterMobile}
+            setViewRegisterMobile={setViewRegisterMobile}
+          />
           {viewRegisterMobile && (
-          <div className={`fixed top-0 bottom-0 left-0 right-0 lightglass z-20`} onClick={() => setViewRegisterMobile(!viewRegisterMobile)}></div>
+            <div className={`fixed top-0 bottom-0 left-0 right-0 lightglass z-20`} onClick={() => setViewRegisterMobile(!viewRegisterMobile)}></div>
           )}
         </div>
 
         <div>
-          <LoginMobileCard 
-          viewloginMobile={viewloginMobile}
-          setViewloginMobile={setViewloginMobile}
-           />
+          <LoginMobileCard
+            viewloginMobile={viewloginMobile}
+            setViewloginMobile={setViewloginMobile}
+          />
           {viewloginMobile && (
-          <div className={`fixed top-0 bottom-0 left-0 right-0 lightglass z-20`} onClick={() => setViewloginMobile(!viewloginMobile)}></div>
+            <div className={`fixed top-0 bottom-0 left-0 right-0 lightglass z-20`} onClick={() => setViewloginMobile(!viewloginMobile)}></div>
           )}
         </div>
 

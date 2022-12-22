@@ -1,59 +1,71 @@
 import React from 'react'
-import { AttractionLandingLinks } from '../../data'
+import { AttractionLandingLinks, NearbyDestinations } from '../../data'
 import { SlCalender } from 'react-icons/sl'
-import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai'
+import { AiOutlineRight, AiOutlineLeft, AiFillStar, AiOutlineClockCircle, AiOutlineHeart } from 'react-icons/ai'
 import { GoThumbsup } from 'react-icons/go'
 import { useSelector } from 'react-redux'
+import { TiTick } from 'react-icons/ti'
 
 function ListResultView({ id }) {
 
     const { excursions, loading } = useSelector(state => state.excursion) 
     const { state } = useSelector(state => state.general) 
 
-    const stateData = state?.find((item) => item.id == id )
+    const stateData = state?.find((item) => Number(item.id) == Number(id) )
     console.log(stateData);
 
     return (
-        <div className='bg-light lg:bg-light'>
-            <div className=' py-2 lg:py-0 mx-4 space-y-10'>
-                {/* {loading ? (
-                    "loading...." 
-                ) : (
-                    excursions?.map((item) => ( */}
-                 {AttractionLandingLinks?.map((item) => (
-                    <div className='lg:grid lg:grid-cols-12 gap-10 text-text bg-soft items-center my-5 lg:my-0 rounded-xl lg:rounded-lg group'>
-                        <div className='col-span-5 z-10 p-3'>
-                            <img src={item.img} alt={item.name} className='bg-no-repeat cover rounded-xl h-56 md:h-96 lg:h-72 w-full   group-hover:shadow-sm transition-all duration-800' />
-                        </div>
-                        <div className='col-span-7 px-4 lg:px-0 space-y-4 my-3'>
-                            <p className='font-light text-dark text-lg'>{item.place} </p>
-                            <h2 className='font-medium text-main text-2xl'>{item.name} </h2>
-                            <div className='text-text flex space-x-1 items-center'>
-                                <span className='text-lg'><GoThumbsup /></span>
-                                <span className=''>80% liked it from {item.reviews} reviews </span>
-                            </div>
-                            <span className='text-sm'>Posted on Travellers choice</span>
-                            <div className=' flex items-center space-x-1 text-green-600'>
-                                <span className=''><SlCalender /> </span>
-                                <span className='text-sm'>Free cancellation available</span>
-                            </div>
-                            <div className='text-lg text-main flex space-x-1 justify-end items-center pb-3 lg:pr-5'>
-                                <span className=''>from</span>
-                                <span className=' font-medium flex items-center'>Rs.{item.price} <AiOutlineRight /> </span>
+        <div>
+            <div className='md:grid md:grid-cols-2 gap-5 mb-7'>
+                {NearbyDestinations?.map((image, index) => (
+                    <div className='' key={index}>
+                        <div className=' snap-start mt-2 bg-light shadow-md p-3 rounded-3xl cursor-pointer mx-2 md:mx-0'>
+                            <div className=' relative space-y-3'>
+                                <div className='overflow-hidden rounded-2xl '>
+                                    <img className='hover:scale-110 object-cover  h-[14em] w-full transition-all duration-500 cursor-pointer' src={image.img} alt={image.name} />
+                                </div>
+                                <div className='px-3 pt-5 flex justify-between '>
+                                    <div className='text-lg font-semibold  text-darktext flex items-center'>
+                                        {image.name}
+                                    </div>
+                                    <div className='flex items-center space-x-1 text-text'>
+                                        <span className='text-3xl'><AiOutlineHeart /></span>
+                                    </div>
+                                </div>
+                                <div className='text-xs text-text px-3'>Hiking tour | Stoke on trend</div>
+                                <div className='px-3 space-y-2  text-darktext'>
+                                    <div className='flex justify-between items-center'>
+                                        <span className='space-y-1'>
+                                            <div className='text-xs text-text font-light'>from</div>
+                                            <div className='text-xl font-medium text-darktext'>AED 990.00</div>
+                                            <div className='text-xs text-text font-light'>*price varies</div>
+                                        </span>
+                                        <span className='space-y-1'>
+                                            <div className=' text-yellow-500 flex'> <AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /><AiFillStar /></div>
+                                            <div className='text-xs text-text flex justify-end'>4.9 (105)</div>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div className='px-3 space-y-2 pb-5  text-darktext'>
+                                    <div className='flex space-x-1 items-center'>
+                                        <span className='text-lightblue'> <AiOutlineClockCircle /></span>
+                                        <span className='text-text text-sm'>7 Days</span>
+                                    </div>
+                                    <div className='flex space-x-3 items-center'>
+                                        <div className='flex space-x-1 items-center'>
+                                            <span className='text-lightblue'><TiTick /></span>
+                                            <span className='text-text text-sm'>Free Cancellation</span>
+                                        </div>
+                                        <div className='flex space-x-1 items-center'>
+                                            <span className='text-lightblue'><TiTick /></span>
+                                            <span className='text-text text-sm'>New On TCtours</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                 ))}
-                 {/* ))
-                 )} */}
-                <div className='bg-light py-3 flex space-x-2 justify-center items-center'>
-                    <span className='h-14 w-14 rounded-full bg-soft flex items-center justify-center'><AiOutlineLeft /> </span>
-                    <span className='h-14 w-14 rounded-full bg-main text-light flex items-center justify-center'>1</span>
-                    <span className='h-14 w-14 rounded-full bg-soft flex items-center justify-center'>2</span>
-                    <span className='h-14 w-14 rounded-full bg-soft flex items-center justify-center'>....</span>
-                    <span className='h-14 w-14 rounded-full bg-soft flex items-center justify-center'>10</span>
-                    <span className='h-14 w-14 rounded-full bg-soft flex items-center justify-center'><AiOutlineRight /> </span>
-                </div>
+                ))}
             </div>
         </div>
     )

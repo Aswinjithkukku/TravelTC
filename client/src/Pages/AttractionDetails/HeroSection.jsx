@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { CiLocationOn } from 'react-icons/ci'
 import { GoThumbsup } from 'react-icons/go'
 import { SlCalender } from 'react-icons/sl'
-import { AiOutlineThunderbolt, AiOutlineMobile, AiFillStar, AiOutlineHeart } from 'react-icons/ai'
+import { AiOutlineThunderbolt, AiOutlineMobile, AiFillStar, AiOutlineHeart, AiOutlineClose } from 'react-icons/ai'
 import { FaHotel } from 'react-icons/fa'
 import { RxShare2 } from 'react-icons/rx'
 import { BsCalendar2X } from 'react-icons/bs'
@@ -16,10 +16,11 @@ import { IoCalendarNumberSharp } from 'react-icons/io5'
 import FeatureSection from './FeatureSection'
 
 function HeroSection() {
-    const [ viewBook, setViewBook ] = useState(false)
+    const [viewBook, setViewBook] = useState(false)
+    const [viewBookCard, setViewBookCard] = useState(false)
     return (
         <div className='bg-soft'>
-            <div className='lg:max-w-6xl lg:mx-auto'>
+            <div className='lg:max-w-screen-xl lg:mx-auto'>
                 <div className=''>
                     <div className='relative lg:grid lg:grid-cols-12 gap-5 my-7 lg:my-0 lg:py-7'>
                         <div className='1st lg:col-span-8'>
@@ -59,9 +60,9 @@ function HeroSection() {
 
                             </div>
 
-                                <>
+                            <>
                                 <FeatureSection />
-                                </>
+                            </>
 
 
                             <div className='bg-light py-10 px-4 rounded-2xl md:my-4 w-full text-darktext'>
@@ -89,27 +90,31 @@ function HeroSection() {
                             </div>
                             <div className='md:my-5'>
                                 <>
-                                    <div className='flex justify-around  bg-lightblue py-5 md:rounded-md px-5 sticky top-0  overflow-x-auto gap-3 z-10'>
-                                        <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-5  focus:border-none bg-light'>
+                                    <div className=' bg-lightblue py-5 md:rounded-md sticky top-0  gap-3 z-10'>
+                                        <div className='overflow-x-auto'>
+                                            <div className='flex space-x-1 items-center px-1 lg:px-5'>
+                                                <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                            <span className=' whitespace-nowrap px-3 py-2'>Package Option</span>
-                                        </button>
-                                        <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-5  focus:border-none bg-light'>
+                                                    <span className=' whitespace-nowrap px-3 py-2'>Package Option</span>
+                                                </button>
+                                                <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                            <span className=' px-3 py-2'>Map</span>
-                                        </button>
-                                        <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-5  focus:border-none bg-light'>
+                                                    <span className=' px-3 py-2'>Map</span>
+                                                </button>
+                                                <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                            <span className=' px-3 py-2'>Reviews</span>
-                                        </button>
-                                        <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-5  focus:border-none bg-light'>
+                                                    <span className=' px-3 py-2'>Reviews</span>
+                                                </button>
+                                                <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                            <span className=' px-3 py-2'>Policies</span>
-                                        </button>
-                                        <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-5  focus:border-none bg-light'>
+                                                    <span className=' px-3 py-2'>Policies</span>
+                                                </button>
+                                                <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                            <span className=' px-3 py-2'>FAQs</span>
-                                        </button>
+                                                    <span className=' px-3 py-2'>FAQs</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
 
                                     <div id='packageSection' className='p-5 bg-light rounded-2xl'>
@@ -119,21 +124,24 @@ function HeroSection() {
                                         <MapSection />
                                     </div>
                                     <div id='reviewSection' className=''>
-                        <ReviewSection />
-                    </div>
-                    <div id='policySection' className='py-5'>
-                        <PolicySection />
-                    </div>
-                    <div id='faqSection' className='py-5'>
-                        <FaqSection />
-                    </div>
+                                        <ReviewSection />
+                                    </div>
+                                    <div id='policySection' className='py-5'>
+                                        <PolicySection />
+                                    </div>
+                                    <div id='faqSection' className='py-5'>
+                                        <FaqSection />
+                                    </div>
                                 </>
                             </div>
                         </div>
 
                         <div className='2nd lg:col-span-4'>
-                            <div className={``}>
-                            <DetailsCard />
+                            <div className={`lightglass  top-0 bottom-0  left-0 right-0 z-10 ${viewBookCard ? "fixed" : "hidden"}`} onClick={() => setViewBookCard(!viewBookCard)}></div>
+                            <div className={`${viewBookCard ? "fixed bottom-0 max-h-[93vh] overflow-y-auto w-full z-10 bg-white" : "-bottom-full invisible h-0 overflow-hidden"} transition-all duration-500  rounded-t-3xl lg:rounded-none lg:block   lg:visible lg:h-auto  lg:sticky lg:top-0`}>
+                                <div className='flex lg:hidden justify-end pt-5 lg:pt-0 px-7 text-4xl' onClick={() => setViewBookCard(!viewBookCard)}><AiOutlineClose /></div>
+
+                                <DetailsCard />
                             </div>
                         </div>
 
@@ -141,9 +149,9 @@ function HeroSection() {
 
                 </div>
             </div>
-            {/* <div className='fixed bottom-0 left-0 right-0 lg:hidden px-7 py-7 bg-light rounded-t-xl z-10'>
-                <button className='bg-blue w-full py-3 rounded-md shadow-sm text-light' onClick={() => setViewBook(!viewBook)}>Book Now</button>
-            </div> */}
+            <div className={`fixed  ${viewBookCard ? "-bottom-full" : "bottom-0"} transition-all duration-500 left-0 right-0 lg:hidden px-7 py-7 bg-light rounded-t-xl z-10`}>
+                <button className='bg-blue w-full py-3 rounded-md shadow-sm text-light' onClick={() => setViewBookCard(!viewBookCard)}>Book Now</button>
+            </div>
         </div>
     )
 }

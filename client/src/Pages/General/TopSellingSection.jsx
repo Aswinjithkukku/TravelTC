@@ -18,7 +18,7 @@ function TopSellingSection() {
       </div>
       <div className='containertop scroll-smooth flex overflow-x-auto snap-x overflow-y-hidden  gap-5'>
         {NearbyDestinations?.map((image, index) => (
-          <div className=' snap-start mt-2 bg-light p-3 rounded-3xl cursor-pointer'>
+          <div className=' snap-start mt-2 bg-light p-3 rounded-3xl cursor-pointer' key={index}>
             <div className=' relative w-[17.5em]'>
               <div className='overflow-hidden rounded-t-3xl rounded-b-md'>
                 <img className='hover:scale-110 object-cover  h-[14em] w-full transition-all duration-500 cursor-pointer' src={image.img} alt={image.name} />

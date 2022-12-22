@@ -5,10 +5,10 @@ function VisaComponentPage() {
     return (
         <>
             <div className='mb-10'>
-                <div className='py-7'>
+                <div className='py-7 mx-4 lg:mx-0'>
                     <div className='text-2xl font-medium text-darktext'>Types of Dubai Visa</div>
                 </div>
-                <div className='grid grid-cols-2 gap-5'>
+                <div className='lg:grid grid-cols-2 gap-5 mx-4 lg:mx-0 space-y-3 lg:space-y-0'>
 
 
                     <div className=' rounded-2xl bg-light border border-lightblue text-darktext cursor-pointer'>

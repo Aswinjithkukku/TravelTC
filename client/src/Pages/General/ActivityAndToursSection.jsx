@@ -13,7 +13,7 @@ function ActivityAndTourSection() {
     dispatch(getSectionData())
   }, [dispatch])
 
-  console.log(sectionData);
+  // console.log(sectionData);
   return (
 
     <div className='mx-5 my-10 lg:mx-auto lg:max-w-screen-xl'>

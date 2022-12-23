@@ -1,5 +1,6 @@
 import React from 'react'
 import { AiFillStar, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 import { NearbyDestinations } from '../../data'
 
 function AttractionsAndLandmarkSection() {
@@ -19,6 +20,7 @@ function AttractionsAndLandmarkSection() {
       </div>
       <div className='containerBAL scroll-smooth flex overflow-x-auto snap-x overflow-y-hidden  gap-5'>
         {NearbyDestinations?.map((image, index) => (
+          <Link to='/attraction'>
           <div className=' snap-start mt-2 bg-light p-3 rounded-3xl cursor-pointer' key={index}>
             <div className=' relative w-[17.5em]'>
               <div className='overflow-hidden rounded-t-3xl rounded-b-md'>
@@ -42,6 +44,7 @@ function AttractionsAndLandmarkSection() {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>

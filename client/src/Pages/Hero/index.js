@@ -7,6 +7,7 @@ import VisaLandingPage from "./VisaLandingPage";
 import BlogLandingPage from "./BlogLandingPage";
 import BlogDetailsPage from "./BlogDetailsPage";
 import SearchingResultPage from "./SearchingResultPage";
+import PaymentPage from "./PaymentPage";
 
 export {
   AttractionLandingPage,
@@ -18,4 +19,5 @@ export {
   BlogLandingPage,
   BlogDetailsPage,
   SearchingResultPage,
+  PaymentPage,
 };

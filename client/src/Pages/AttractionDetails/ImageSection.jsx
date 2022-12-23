@@ -1,5 +1,8 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
+import burj1 from '../../static/images/burj1.jpg'
+import burj2 from '../../static/images/burj2.jpg'
+import burj3 from '../../static/images/burj3.jpg'
 
 function ImageSection() {
     return (
@@ -12,15 +15,15 @@ function ImageSection() {
                                 className='rounded-xl object-cover w-full h-[16vh] hidden lg:block' />
                         </div>
                         <div className=''>
-                            <img src='https://images.pexels.com/photos/3763190/pexels-photo-3763190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='Burj Khalifa'
+                            <img src={burj1} alt='Burj Khalifa'
                                 className='rounded-xl object-cover w-full h-[16vh] hidden lg:block' />
                         </div>
                         <div className=''>
-                            <img src='https://cdn.pixabay.com/photo/2021/12/22/14/55/tourists-6887737_960_720.jpg' alt='Burj Khalifa'
+                            <img src={burj2} alt='Burj Khalifa'
                                 className='rounded-xl object-cover w-full h-[16vh] hidden lg:block' />
                         </div>
                         <div className=''>
-                            <img src='https://cdn.pixabay.com/photo/2020/03/11/14/32/burj-khalifa-4922317_960_720.jpg' alt='Burj Khalifa'
+                            <img src={burj3} alt='Burj Khalifa'
                                 className='rounded-xl object-cover w-full h-[16vh] hidden lg:block' />
                         </div>
                     </div>

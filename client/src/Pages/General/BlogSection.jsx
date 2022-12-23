@@ -13,7 +13,7 @@ function BlogSection() {
         dispatch(getIndependentBlog())
     },[dispatch])
 
-    console.log(independentBlog);
+    // console.log(independentBlog);
     return (
         <div className='my-10 lg:max-w-screen-xl lg:mx-auto'>
             <div className='space-y-5'>
@@ -40,7 +40,7 @@ function BlogSection() {
                                 <div className='px-3 space-y-3 pb-5 pt-3 text-darktext'>
                                     <div className='font-semibold'>{blog.title} </div>
                                     <i className='text-bluetrans font-light text-sm '>{blog.date}</i>
-                                    <div className='text-sm text-text leading-relaxed'>
+                                    <div className='text-sm text-text leading-relaxed line-clamp-6'>
                                         {blog.desc}
                                     </div>
                                     <div className='flex justify-end'>

@@ -5,6 +5,7 @@ import { AiOutlineRight, AiOutlineLeft, AiFillStar, AiOutlineClockCircle, AiOutl
 import { GoThumbsup } from 'react-icons/go'
 import { useSelector } from 'react-redux'
 import { TiTick } from 'react-icons/ti'
+import { Link } from 'react-router-dom'
 
 function ListResultView({ id }) {
 
@@ -19,6 +20,7 @@ function ListResultView({ id }) {
             <div className='md:grid md:grid-cols-2 gap-5 mb-7'>
                 {NearbyDestinations?.map((image, index) => (
                     <div className='' key={index}>
+                        <Link to='/details'>
                         <div className=' snap-start mt-2 bg-light shadow-md p-3 rounded-3xl cursor-pointer mx-2 md:mx-0'>
                             <div className=' relative space-y-3'>
                                 <div className='overflow-hidden rounded-2xl '>
@@ -37,7 +39,7 @@ function ListResultView({ id }) {
                                     <div className='flex justify-between items-center'>
                                         <span className='space-y-1'>
                                             <div className='text-xs text-text font-light'>from</div>
-                                            <div className='text-xl font-medium text-darktext'>AED 990.00</div>
+                                            <div className='text-xl font-medium text-darktext'>AED 175.00</div>
                                             <div className='text-xs text-text font-light'>*price varies</div>
                                         </span>
                                         <span className='space-y-1'>
@@ -64,6 +66,7 @@ function ListResultView({ id }) {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     </div>
                 ))}
             </div>

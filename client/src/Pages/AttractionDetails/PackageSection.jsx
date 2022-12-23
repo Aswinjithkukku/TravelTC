@@ -11,16 +11,16 @@ function PackageSection() {
                 <div className='p-4'>
                     <div className='flex space-x-3 py-4'>
                         <div className='flex items-center'>
-                            <input type='radio' className='scale-125' checked={show}  onChange={(e) => setShow(!show) } />
+                            <input type='radio' className='scale-125' checked={show}  onChange={(e) => setShow(false) } />
                         </div>
                         <div className=''>
                             <div className='font-medium lg:text-lg '>Burj Khalifa & Dubai Aquarium Combo</div>
                             <div className='text-xs lg:text-sm'>2 Hours</div>
-                            <div className='text-lightblue cursor-pointer' onClick={() => setShow(!show)}>{show ? "Hide details" : "Show details" }</div>
+                            <div className='text-lightblue cursor-pointer' onClick={() => setShow(false)}>{show ? "Hide details" : "Show details" }</div>
                         </div>
                         <div className=''>
-                            <div className='text-text text-sm lg:text-base'>INR 7,345</div>
-                            <div className='text-lightblue font-semibold lg:text-lg whitespace-nowrap'>INR 6,550.19</div>
+                            <div className='text-text text-sm lg:text-base'> 732 AED</div>
+                            <div className='text-lightblue font-semibold lg:text-lg whitespace-nowrap'>AED 650</div>
                             <div className='text-xs'>Per Adult</div>
                         </div>
                     </div>
@@ -67,7 +67,7 @@ function PackageSection() {
                                 <span className=''>Admission to: Underwater Zoo</span>
                             </div>
                         </div>
-                        <div className='text-lightblue my-4 cursor-pointer' onClick={() => setShow(!show)}>Hide details</div>
+                        <div className='text-lightblue my-4 cursor-pointer' onClick={() => setShow(false)}>Hide details</div>
 
                     </div>
                 </div>

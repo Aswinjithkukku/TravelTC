@@ -14,6 +14,7 @@ import FaqSection from './FaqSection'
 import DetailsCard from './DetailsCard'
 import { IoCalendarNumberSharp } from 'react-icons/io5'
 import FeatureSection from './FeatureSection'
+import TourOverview from './TourOverview'
 
 function HeroSection() {
     const [viewBook, setViewBook] = useState(false)
@@ -125,6 +126,9 @@ function HeroSection() {
                                     </div>
                                     <div id='reviewSection' className=''>
                                         <ReviewSection />
+                                    </div>
+                                    <div id='policySection' className='py-5'>
+                                        <TourOverview />
                                     </div>
                                     <div id='policySection' className='py-5'>
                                         <PolicySection />

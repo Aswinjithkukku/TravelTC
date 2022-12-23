@@ -28,7 +28,7 @@ function Navbar() {
     dispatch(getLogo())
   }, [dispatch])
 
-  console.log(logo);
+  // console.log(logo);
   return (
     <>
       <div className='block bg-[#002366]'>

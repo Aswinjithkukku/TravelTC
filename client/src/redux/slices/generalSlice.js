@@ -6,10 +6,11 @@ const initialState = {
     state: [],
     logo: [],
     sectionData: [],
-    banners: {},
+    banners: [],
     sections: [],
     helplines:[],
     independentBlog: [],
+    footers: []
 }
 
 export const getState = createAsyncThunk(
@@ -35,7 +36,7 @@ export const getLogo = createAsyncThunk(
     }
 )
 
-// get images for banner
+// get images for banner 
 export const getBanners = createAsyncThunk(
     "general/getBanners",
     async(args, {getState}) => {
@@ -69,7 +70,7 @@ export const getHelplines = createAsyncThunk(
     "general/getHelplines",
     async(args,{getState}) => {
         const { data } = await axios.get('/general/helpline')
-        console.log(data)
+        // console.log(data)
         return data
     }
 )
@@ -79,7 +80,17 @@ export const getIndependentBlog = createAsyncThunk(
     "general/getIndependentBlog",
     async(args,{getState}) => {
         const { data } = await axios.get('/general/blog')
-        console.log(data)
+        // console.log(data)
+        return data
+    }
+)
+
+// for footer section
+export const getFooter = createAsyncThunk(
+    "general/getFooter",
+    async(args,{getState}) => {
+        const { data } = await axios.get('/general/footer')
+        // console.log(data)
         return data
     }
 )
@@ -143,6 +154,14 @@ const generalSlice = createSlice({
         [getIndependentBlog.fulfilled]: (state, action) => {
             state.loading = false
             state.independentBlog = action.payload
+        },
+
+        [getFooter.pending]: (state, action) => {
+            state.loading = true
+        },
+        [getFooter.fulfilled]: (state, action) => {
+            state.loading = false
+            state.footers = action.payload
         },
 
     }

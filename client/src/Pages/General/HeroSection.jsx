@@ -4,12 +4,12 @@ import { MdAttractions } from 'react-icons/md'
 import { GiCommercialAirplane } from 'react-icons/gi'
 import { IoIosCar } from 'react-icons/io'
 import { FaHotel, FaWpforms } from 'react-icons/fa'
-import banner from "../../static/images/banner.jpg"
-import dubai from "../../static/images/dubai.jpg"
-import uae from "../../static/images/uae.jpg"
+import banner1 from "../../static/images/banner1.jpg"
+import banner2 from "../../static/images/banner2.jpg"
+import banner3 from "../../static/images/banner3.jpg"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
-import { AttractionCard,FlightCard,HotelCard,CarCard,VisaCard } from '../../components/Attractions'
+import { AttractionCard, FlightCard, HotelCard, CarCard, VisaCard } from '../../components/Attractions'
 import { IoLocationOutline } from 'react-icons/io5'
 import { useDispatch, useSelector } from 'react-redux'
 import { getBanners } from '../../redux/slices/generalSlice'
@@ -33,9 +33,11 @@ function HeroSection() {
         }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getBanners())
-    },[dispatch])
+    }, [dispatch])
+
+    // console.log(banners);
 
     return (
         <div>
@@ -69,16 +71,18 @@ function HeroSection() {
                                 showStatus={false}
                                 onChange={updateCurrentSlide}
                             >
-                                {/* {banner?.map((item) => ( */}
+                                {/* {banners?.map((item) => (
                                 <div className='bg-inherit h-full'>
-                                    <img src={uae} alt='hero' className='bg-cover h-full' />
-                                     {/* <img src={item.img} alt={item.name} className='bg-cover h-full' /> */}
+                                     <img src={item.img} alt='banner' className='bg-cover h-full' />
                                 </div>
-                                {/* ))}  */}
-                                 <img src={dubai} alt='hero' className='bg-cover h-full' />
-                                 <img src={banner} alt='hero' className='bg-cover h-full' /> 
+                                ))}  */}
+                                <img src={banner1} alt='hero' className='bg-cover h-full' />
+                                <img src={banner2} alt='hero' className='bg-cover h-full' />
+                                <img src={banner3} alt='hero' className='bg-cover h-full' /> 
 
                             </Carousel>
+                            
+
                         </div>
                         <div className=' md:absolute z-10 bottom-36 w-full md:flex justify-center '>
                             <div className='md:w-9/12 relative'>

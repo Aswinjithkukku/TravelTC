@@ -1,0 +1,76 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\ASWIN JITH KUKKU\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add react-payment-inputs styled-components
+
+PATH: 
+  C:\Users\ASWIN JITH KUKKU\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ASWIN JITH KUKKU\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Program Files (x86)\dotnet;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\ProgramData\chocolatey\bin;C:\mingw64\bin;C:\Program Files\dotnet;C:\Program Files\nodejs;C:\Program Files\Redis;C:\Users\ASWIN JITH KUKKU\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\ASWIN JITH KUKKU\AppData\Local\Programs\Python\Python39;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\dotnet;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Users\ASWIN JITH KUKKU\AppData\Local\Microsoft\WindowsApps;C:\Users\ASWIN JITH KUKKU\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.1\bin;C:\Python34\Scripts;C:\Program Files\heroku\bin;C:\Users\ASWIN JITH KUKKU\AppData\Local\Microsoft\WindowsApps;C:\Users\ASWIN JITH KUKKU\AppData\Roaming\npm;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.17.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, copyfile 'C:\Users\ASWIN JITH KUKKU\AppData\Local\Yarn\Cache\v6\npm-axios-1.2.1-44cf04a3c9f0c2252ebd85975361c026cb9f864a-integrity\node_modules\axios\package.json' -> 'C:\Users\ASWIN JITH KUKKU\Documents\DIGIBLOCK\TRIP\client\node_modules\axios\package.json'
+
+npm manifest: 
+  {
+    "name": "client",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "@reduxjs/toolkit": "^1.9.1",
+      "@testing-library/jest-dom": "^5.16.5",
+      "@testing-library/react": "^13.4.0",
+      "@testing-library/user-event": "^13.5.0",
+      "axios": "^1.2.1",
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-icons": "^4.7.1",
+      "react-player": "^2.11.0",
+      "react-redux": "^8.0.5",
+      "react-responsive-carousel": "^3.2.23",
+      "react-router-dom": "^6.4.5",
+      "react-scripts": "5.0.1",
+      "web-vitals": "^2.1.4"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app",
+        "react-app/jest"
+      ]
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "@tailwindcss/line-clamp": "^0.4.2",
+      "autoprefixer": "^10.4.13",
+      "postcss": "^8.4.19",
+      "tailwindcss": "^3.2.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

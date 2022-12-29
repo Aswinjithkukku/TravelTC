@@ -3,8 +3,6 @@ import Navigator from '../../components/Layouts/Navigator'
 import FunctionalitySection from '../AttractionLanding/FunctionalitySection'
 import ListResultView from '../AttractionLanding/ListResultView'
 import { useDispatch } from 'react-redux'
-import { getExcursions } from '../../redux/slices/excursionSlice'
-import { getState } from '../../redux/slices/generalSlice'
 import { useParams } from 'react-router-dom'
 
 function AttractionLandingPage() {
@@ -12,10 +10,6 @@ function AttractionLandingPage() {
   const {id} = useParams()
   const [ viewFliters,setViewFilters ] = useState(false)
 
-  useEffect(() => {
-    dispatch(getExcursions())
-    dispatch(getState())
-},[dispatch])
 
   return (
     <div className='relative'>

@@ -29,7 +29,7 @@ const ThemeRoutes = [
             { path: "/blog", element: <BlogLandingPage /> },
             { path: "/blog/details", element: <BlogDetailsPage /> },
             { path: "/search", element: <SearchingResultPage /> },
-            { path: "/payment", element: <PaymentPage /> },
+            { path: "/payment/:id", element: <PaymentPage /> },
         ]
     },
 ]

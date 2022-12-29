@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { excursionReducer, generalReducer } from './slices'
+import { excursionReducer, generalReducer, paymentReducer } from './slices'
 
 const store = configureStore({
   reducer: {
     excursion: excursionReducer,
     general: generalReducer,
+    payment: paymentReducer,
   },
   devTools: true,
 });

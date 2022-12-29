@@ -4,9 +4,23 @@ import { PaymentInputsWrapper, usePaymentInputs } from 'react-payment-inputs';
 import images from 'react-payment-inputs/images';
 
 function PaymentDetailsSection() {
+
+    const [ travellerData, setTravellerData ] = useState({
+        gender: "",
+        firstname: "",
+        lastname: "",
+        email: "",
+        country: "",
+        phone: "",
+        special_request_text: ""
+    }) 
+    const [viewRedeem, setViewRedeem] = useState(false)
     const { wrapperProps, getCardImageProps, getCardNumberProps, getExpiryDateProps, getCVCProps } = usePaymentInputs();
 
-    const [viewRedeem, setViewRedeem] = useState(false)
+    const onChange = (e) => {
+        setTravellerData({...travellerData, [e.target.name]: e.target.value })
+    }
+
     return (
         <>
             <div className='bg-light  w-full p-5 rounded-2xl space-y-5'>
@@ -19,10 +33,15 @@ function PaymentDetailsSection() {
                             <label className=''>Mr/Mrs</label>
                         </div>
                         <div className=''>
-                            <select type='text' className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light' >
-                                <option>Mr.</option>
-                                <option>Mrs.</option>
-                                <option>Ms.</option>
+                            <select 
+                            type='text'
+                            name='gender'
+                            value={travellerData.gender}
+                            onChange={onChange}
+                             className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light' >
+                                <option value={"male"}>Mr.</option>
+                                <option value={"female"}>Mrs.</option>
+                                <option value={"other"}>Ms.</option>
                             </select>
                         </div>
                     </div>
@@ -31,7 +50,13 @@ function PaymentDetailsSection() {
                             <label className=''>First Name</label>
                         </div>
                         <div className=''>
-                            <input type='text' className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light' />
+                            <input 
+                            type='text' 
+                            className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light'
+                            name='firstname'
+                            value={travellerData.firstname}
+                            onChange={onChange}
+                            />
                         </div>
                     </div>
                     <div className='lg:w-5/12'>
@@ -39,7 +64,13 @@ function PaymentDetailsSection() {
                             <label className=''>Last Name</label>
                         </div>
                         <div className=''>
-                            <input type='text' className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light' />
+                            <input 
+                            type='text' 
+                            className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light'
+                            name='lastname'
+                            value={travellerData.lastname}
+                            onChange={onChange}
+                            />
                         </div>
                     </div>
                 </div>
@@ -49,7 +80,13 @@ function PaymentDetailsSection() {
                             <label className=''>Email</label>
                         </div>
                         <div className=''>
-                            <input type='text' className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light' />
+                            <input 
+                            type='text' 
+                            className='border w-full py-2 rounded-lg px-2 text-darktext placeholder:text-darktext focus:outline-none focus:border-none focus:ring-1 focus:ring-blue bg-light'
+                            name='lastname'
+                            value={travellerData.lastname}
+                            onChange={onChange}
+                            />
                         </div>
                     </div>
                     <div className='lg:w-4/12'>
@@ -143,17 +180,14 @@ function PaymentDetailsSection() {
                 </div>
 
 
-
-
-
             </div>
             <div className='bg-light my-5 p-7 rounded-2xl lg:flex '>
                 <div className='{" "}'>
                     <span className='cursor-default '>By Clicking Pay Now You agree that you have read and understood our {" "}</span>
                     <span className='text-lightblue underline cursor-pointer'>Terms & Conditions</span>
                 </div>
-                <div className='text-center'>
-                    <button className='text-light bg-lightblue px-3 py-2 rounded-lg text whitespace-nowrap'>Pay Now</button>
+                <div className='text-center fixed lg:static bottom-0 left-0 right-0 rounded-t-3xl lg:rounded-none py-8 bg-light lg:bg-none px-10 lg:px-0 z-10'>
+                    <button className='text-light bg-lightblue px-3 py-2 rounded-lg text whitespace-nowrap w-full'>Pay Now</button>
                 </div>
             </div>
         </>

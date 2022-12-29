@@ -1,24 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { CiLocationOn } from 'react-icons/ci'
-import { GoThumbsup } from 'react-icons/go'
+// import { GoThumbsup } from 'react-icons/go'
 import { SlCalender } from 'react-icons/sl'
-import { AiOutlineThunderbolt, AiOutlineMobile, AiFillStar, AiOutlineHeart, AiOutlineClose } from 'react-icons/ai'
-import { FaHotel } from 'react-icons/fa'
+import {  AiFillStar, AiOutlineHeart, AiOutlineClose } from 'react-icons/ai'
+// import { FaHotel } from 'react-icons/fa'
 import { RxShare2 } from 'react-icons/rx'
-import { BsCalendar2X } from 'react-icons/bs'
+// import { BsCalendar2X } from 'react-icons/bs'
 import PackageSection from './PackageSection'
 import MapSection from './MapSection'
 import ReviewSection from './ReviewSection'
-import PolicySection from './PolicySection'
+// import PolicySection from './PolicySection'
 import FaqSection from './FaqSection'
 import DetailsCard from './DetailsCard'
-import { IoCalendarNumberSharp } from 'react-icons/io5'
+// import { IoCalendarNumberSharp } from 'react-icons/io5'
 import FeatureSection from './FeatureSection'
-import TourOverview from './TourOverview'
+// import TourOverview from './TourOverview'
+import { useDispatch, useSelector } from 'react-redux'
+import { getExcursions } from '../../redux/slices/excursionSlice'
 
 function HeroSection() {
-    const [viewBook, setViewBook] = useState(false)
+    const dispatch = useDispatch()
+
+    const { excursion } = useSelector(state => state.excursion)
+
+    useEffect(() => {
+        dispatch(getExcursions())
+    }, [dispatch])
+    // const [viewBook, setViewBook] = useState(false)
     const [viewBookCard, setViewBookCard] = useState(false)
+
     return (
         <div className='bg-soft'>
             <div className='lg:max-w-screen-xl lg:mx-auto'>
@@ -30,7 +40,7 @@ function HeroSection() {
                                 <div className='flex justify-between'>
                                     <div className='space-y-5'>
                                         <div className='text-3xl font-bold '>
-                                            Burj Khalifa
+                                            {excursion?.title}
                                         </div>
                                         <div className='flex items-center space-x-3 text-sm'>
                                             <span className=' text-yellow-500 flex space-x-1 '>
@@ -41,13 +51,9 @@ function HeroSection() {
                                                 <AiFillStar />
                                             </span>
                                             <span className='text-text'>(1935 Reviews)</span>
-                                            <span className='flex items-center text-blue'><CiLocationOn /> Dubai </span>
+                                            <span className='flex items-center text-blue'><CiLocationOn /> {excursion?.destination?.name} </span>
                                         </div>
-                                        {/* <div className='text-sm flex space-x-1 items-center'>
-                                    <span className=''><GoThumbsup /></span>
-                                    <span className=''>80% liked it from 20 reviews </span>
-                                </div>
-                                <span className='text-xs'>Posted on Booking.com</span> */}
+
                                         <div className='text-sm flex items-center space-x-1 text-green-600'>
                                             <span className=''><SlCalender /> </span>
                                             <span className='text-xs'>Free cancellation available</span>
@@ -68,24 +74,10 @@ function HeroSection() {
 
                             <div className='bg-light py-10 px-4 rounded-2xl md:my-4 w-full text-darktext'>
                                 <div className='py-3'>
-                                    <span className='text-xl font-semibold text-darktext '>Burj Khalifa and Dubai Aquarium Ticket Combo Highlights</span>
+                                    <span className='text-xl font-semibold text-darktext '>{excursion?.title} Highlights</span>
                                 </div>
                                 <div className='space-y-6 text-text mt-3'>
-                                    <div className='flex space-x-2'>
-                                        <span className='text-xl text-blue flex justify-center'><AiOutlineThunderbolt /> </span>
-                                        <span className='text-sm '>Explore one of the most famous & tallest skyscraper in the world, The Burj Khalifa </span>
-                                    </div>
-                                    <div className='flex space-x-2'>
-                                        <span className='text-xl text-blue flex justify-center'><AiOutlineThunderbolt /> </span>
-                                        <span className='text-sm '>Witness the picturesque views of Dubai's skyline from 124th & 125th floors </span>
-                                    </div>
-                                    <div className='flex space-x-2'>
-                                        <span className='text-xl text-blue flex justify-center'><AiOutlineThunderbolt /> </span>
-                                        <span className='text-sm '>Catch the glimpse of aquatic animals, reptiles like Otters, Water Rats, Sea Horses, & Sea Jellies </span>
-                                    </div>
-                                    <div className='flex space-x-2'>
-                                        <span className='text-xl text-blue flex justify-center'><AiOutlineThunderbolt /> </span>
-                                        <span className='text-sm '>Take a walk to witness various marine species in the 48 m long tunnel in the Dubai Aquarium </span>
+                                    <div dangerouslySetInnerHTML={{ __html: excursion?.highlights }} className=''>
                                     </div>
                                 </div>
                             </div>
@@ -96,7 +88,7 @@ function HeroSection() {
                                             <div className='flex space-x-1 items-center px-1 lg:px-5'>
                                                 <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                                    <span className=' whitespace-nowrap px-3 py-2'>Package Option</span>
+                                                    <a href='#packageSection'> <span className=' whitespace-nowrap px-3 py-2'>Package Option</span></a>
                                                 </button>
                                                 <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
@@ -104,7 +96,7 @@ function HeroSection() {
                                                 </button>
                                                 <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
-                                                    <span className=' px-3 py-2'>Reviews</span>
+                                                <a href='#reviewSection'> <span className=' px-3 py-2'>Reviews</span></a>
                                                 </button>
                                                 <button className='border border-lightblue rounded-lg hover:bg-lightblue hover:text-light hover:border-light text-blue w-full py-3 text-center focus:ring-light focus:bg-lightblue focus:text-light focus:ring-1 focus:outline-none px-3 lg:px-5  focus:border-none bg-light'>
 
@@ -118,21 +110,36 @@ function HeroSection() {
                                         </div>
                                     </div>
 
-                                    <div id='packageSection' className='p-5 bg-light rounded-2xl'>
+                                    <div id='packageSection' className='p-5 bg-light rounded-2xl '>
                                         <PackageSection />
                                     </div>
                                     <div id='mapSection' className='p-5 my-5 bg-light rounded-2xl'>
                                         <MapSection />
                                     </div>
+
+
+                                    {excursion?.sections?.map((item) => (
+                                        <div className='bg-light py-10 px-4 rounded-2xl md:my-4 w-full text-darktext'>
+                                            <div className='py-3'>
+                                                <span className='text-xl font-semibold text-darktext '>{item?.title}</span>
+                                            </div>
+                                            <div className='space-y-6 text-text mt-3'>
+                                                <div dangerouslySetInnerHTML={{ __html: item?.body }} className=' space-y-2'>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+
+
                                     <div id='reviewSection' className=''>
                                         <ReviewSection />
                                     </div>
-                                    <div id='policySection' className='py-5'>
+                                    {/* <div id='policySection' className='py-5'>
                                         <TourOverview />
                                     </div>
                                     <div id='policySection' className='py-5'>
                                         <PolicySection />
-                                    </div>
+                                    </div> */}
                                     <div id='faqSection' className='py-5'>
                                         <FaqSection />
                                     </div>

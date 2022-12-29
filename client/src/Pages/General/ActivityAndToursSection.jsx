@@ -1,26 +1,25 @@
 import React, { useEffect } from 'react'
 import { AiFillStar, AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { NearbyDestinations } from '../../data'
-import { getSections,getSectionData } from '../../redux/slices/generalSlice'
 import { useDispatch, useSelector } from 'react-redux'
 
 function ActivityAndTourSection() {
   const dispatch = useDispatch()
 
-  const { sections, sectionData } = useSelector(state => state.general)
-  useEffect(() => {
-    dispatch(getSections())
-    dispatch(getSectionData())
-  }, [dispatch])
+  // const { sections, sectionData } = useSelector(state => state.general)
+  // useEffect(() => {
+  //   dispatch(getSections())
+  //   dispatch(getSectionData())
+  // }, [dispatch])
 
   // console.log(sectionData);
   return (
 
     <div className='mx-5 my-10 lg:mx-auto lg:max-w-screen-xl'>
-      {sections?.map((sec) => (
-      <div key={sec.id}>
+      {/* {sections?.map((sec) => ( */}
+      <div >
         <div className='flex justify-between' >
-          <div className='text-3xl font-semibold text-darktext mb-4 cursor-default'>{sec.title}</div>
+          <div className='text-3xl font-semibold text-darktext mb-4 cursor-default'>titlr</div>
           <div className='hidden  lg:flex space-x-5'>
             <button className='hover:bg-main rounded-full w-12 h-12 flex justify-center items-center hover:text-light text-xl bg-light text-main duration-500' onClick={() => {
               document.querySelector('.containerAT').scrollLeft -= 200
@@ -58,7 +57,7 @@ function ActivityAndTourSection() {
           ))}
         </div>
       </div>
-      ))}
+      {/* ))} */}
     </div>
   )
 }

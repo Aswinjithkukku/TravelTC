@@ -2,16 +2,15 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import banner from '../../static/images/banner.jpg'
 import { useDispatch, useSelector } from 'react-redux'
-import { getIndependentBlog } from '../../redux/slices/generalSlice'
 
 function BlogSection() {
     const dispatch = useDispatch()
 
-    const { independentBlog } = useSelector(state => state.general)
+    // const { independentBlog } = useSelector(state => state.general)
 
-    useEffect(() => {
-        dispatch(getIndependentBlog())
-    },[dispatch])
+    // useEffect(() => {
+    //     dispatch(getIndependentBlog())
+    // },[dispatch])
 
     // console.log(independentBlog);
     return (
@@ -31,17 +30,17 @@ function BlogSection() {
                         </Link>
                     </div>
                     <div className=' gap-5 md:grid-cols-2 md:grid lg:grid-cols-3'>
-                        {independentBlog?.map((blog) => (
-                        <div className=' mt-2 bg-light p-3 rounded-3xl cursor-pointer'key={blog.id}>
+                        {/* {independentBlog?.map((blog) => ( */}
+                        <div className=' mt-2 bg-light p-3 rounded-3xl cursor-pointer'>
                             <div className=' relative'>
                                 <div className='overflow-hidden rounded-t-3xl rounded-b-md'>
-                                    <img className='hover:scale-110 object-cover  h-[14em] lg:[14em] w-full transition-all duration-500 cursor-pointer' src={blog.img} alt={blog.id} />
+                                    <img className='hover:scale-110 object-cover  h-[14em] lg:[14em] w-full transition-all duration-500 cursor-pointer' src={banner} alt={'banner'} />
                                 </div>
                                 <div className='px-3 space-y-3 pb-5 pt-3 text-darktext'>
-                                    <div className='font-semibold'>{blog.title} </div>
-                                    <i className='text-bluetrans font-light text-sm '>{blog.date}</i>
+                                    <div className='font-semibold'>dsnvhsdgh </div>
+                                    <i className='text-bluetrans font-light text-sm '>10/101/22</i>
                                     <div className='text-sm text-text leading-relaxed line-clamp-6'>
-                                        {blog.desc}
+                                        dsdbhksgdfhsgf
                                     </div>
                                     <div className='flex justify-end'>
                                         <button className='py-1 px-2 bg-lightblue hover:bg-blue rounded-md text-light text-sm '>Read more</button>
@@ -49,7 +48,7 @@ function BlogSection() {
                                 </div>
                             </div>
                         </div>
-                        ))}
+                        {/* ))} */}
 
                     </div>
                 </div>

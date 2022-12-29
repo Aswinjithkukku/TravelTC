@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
-import travellersChoice from '../../static/images/travellersChoice.png'
+// import travellersChoice from '../../static/images/travellersChoice.png'
 import Register from '../Authentication/Register';
 import Login from '../Authentication/Login';
 import { FaFacebookF, FaGooglePlusG, FaInstagram } from 'react-icons/fa';
 import RegisterMobileCard from '../Authentication/RegisterMobileCard';
 import LoginMobileCard from '../Authentication/LoginMobileCard';
 // import axios from '../../axios'
-import { getLogo } from '../../redux/slices/generalSlice';
+import { getHome } from '../../redux/slices/generalSlice';
 import { useDispatch, useSelector } from 'react-redux'
 
 function Navbar() {
 
   const dispatch = useDispatch()
-  const { logo,helplines } = useSelector(state => state.general)
+  const { home } = useSelector(state => state.general)
 
   const [viewRegister, setViewRegister] = useState(false)
   const [viewlogin, setViewlogin] = useState(false)
@@ -25,10 +25,9 @@ function Navbar() {
   const [viewHelpline, setViewHelpline] = useState(false)
 
   useEffect(() => {
-    dispatch(getLogo())
+    dispatch(getHome())
   }, [dispatch])
 
-  // console.log(logo);
   return (
     <>
       <div className='block bg-[#002366]'>
@@ -57,16 +56,16 @@ function Navbar() {
               {/* absolute div */}
               {viewHelpline && (
                 <div className='absolute top-7 md:top-8 left-14 md:left-24 bg-[#002366]'>
-                    {helplines?.map((num) => (
-                  <div className='mx-7 space-y-3 py-2' key={num.id}>
+                    {/* {helplines?.map((num) => ( */}
+                  <div className='mx-7 space-y-3 py-2' >
                     <div className='text-soft '>
-                      <a href={`tel:+91${num.number_1}`}>+91{num.number_1}</a>
+                      <a href={`tel:+915555555`}>+916555555</a>
                     </div>
                     <div className='text-soft ' >
-                      <a href={`tel:+91${num.number_2}`}>+91{num.number_2}</a>
+                      <a href={`tel:+91$5555555`}>+9155555</a>
                     </div>
                   </div>
-                    ))}
+                    {/* ))} */}
                 </div>
               )}
               {/* absolute div */}
@@ -134,11 +133,11 @@ function Navbar() {
         <div className=' py-1 px-3 lg:max-w-screen-xl lg:mx-auto'>
           <div className='flex justify-between'>
             <Link to='/'>
-              {logo?.map((item) => (
-              <div className='' key={item.id}>
-                <img className='h-8 md:h-14' src={item.img} alt={item.title} />
+              {/* {logo?.map((item) => ( */}
+              <div className='' >
+                <img className='h-8 md:h-14' src={'http://127.0.0.1:5000'+ home?.logo} alt={'img'} />
               </div>
-              ))}
+              {/* ))} */}
               {/* <div className=''>
                 <img className='h-8 md:h-14' src={travellersChoice} alt='tc' />
               </div> */}

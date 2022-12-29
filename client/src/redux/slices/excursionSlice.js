@@ -3,24 +3,10 @@ import axios from "../../axios";
 
 const initialState = {
   loading: false,
-  // moreDestinations: [],
-  excursions: [],
-  // enquiryExcursion: [],
+  excursion: {},
+  reviews: [],
 };
 
-// export const getMoreDestinations = createAsyncThunk(
-//   "excursion/getMoreDestinations",
-//   async (args, { getState }) => {
-    // const { token } = getState().user
-    // const config = {
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    // };
-//     const response = await axios.get("/general/state");
-//     return response.data;
-//   }
-// );
 export const getExcursions = createAsyncThunk(
   "excursion/getExcursions",
   async (args, { getState }) => {
@@ -30,7 +16,21 @@ export const getExcursions = createAsyncThunk(
     //     "Content-Type": "application/json",
     //   },
     // };
-    const response = await axios.get("/tour/exe");
+    const response = await axios.get("/attractions/single/63ac0a9e23d63a74a8cad48b");
+    return response.data;
+  }
+);
+
+export const getReviews = createAsyncThunk(
+  "excursion/getReviews",
+  async (args, { getState }) => {
+    // const { token } = getState().user
+    // const config = {
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // };
+    const response = await axios.get("/attractions/reviews/single/63ac0a9e23d63a74a8cad48b");
     return response.data;
   }
 );
@@ -39,19 +39,19 @@ const excursionSlice = createSlice({
   name: "excursion",
   initialState,
   extraReducers: {
-    // [getMoreDestinations.pending]: (state, action) => {
-    //   state.loading = true;
-    // },
-    // [getMoreDestinations.fulfilled]: (state, action) => {
-    //   state.loading = false;
-    //   state.moreDestinations = action.payload;
-    // },
     [getExcursions.pending]: (state, action) => {
       state.loading = true;
     },
     [getExcursions.fulfilled]: (state, action) => {
       state.loading = false;
-      state.excursions = action.payload;
+      state.excursion = action.payload;
+    },
+    [getReviews.pending]: (state, action) => {
+      state.loading = true;
+    },
+    [getReviews.fulfilled]: (state, action) => {
+      state.loading = false;
+      state.reviews = action.payload;
     },
   },
 });
